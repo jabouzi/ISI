@@ -1,0 +1,6 @@
+
+bsquid:UselessImportCheck	"2Remove this unused import 'android.widget.Button'.(²òıÿÿÿÿ8²À‰¢ì-
+dsquid:UselessImportCheck
+"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ8ÌÔ–»í-
+lsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(²Ú±8ÌÔ–»í-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ÿêïùÿÿÿÿ8ÌÔ–»í-

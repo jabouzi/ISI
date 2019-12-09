@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="image1">#7F7F7F</color>
+    <color name="image2">#FF0000</color>
+    <color name="image3">#800080</color>
+    <color name="image4">#0000FF</color>
+    <color name="image5">#008000</color>
+    <color name="image6">#7F7F7F</color>
+    <color name="image7">#FF0000</color>
+    <color name="image8">#800080</color>
+    <color name="image9">#0000FF</color>
+    <color name="image10">#008000</color>
+    <color name="image11">#7F7F7F</color>
+    <color name="image12">#FF0000</color>
+    <color name="image13">#800080</color>
+    <color name="image14">#0000FF</color>
+    <color name="image15">#008000</color>
+    <color name="image16">#7F7F7F</color>
+    <color name="image17">#FF0000</color>
+    <color name="image18">#800080</color>
+    <color name="image19">#0000FF</color>
+    <color name="image20">#008000</color>
+</resources>

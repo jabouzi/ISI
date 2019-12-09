@@ -1,0 +1,8 @@
+
+5squid:S2119T"Save and re-use this "Random".(¡Å”¦
+wsquid:S00115""ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¨ô³Ðûÿÿÿÿ
+osquid:ModifiersOrderCheck%"EReorder the modifiers to comply with the Java Language Specification.(Õ¿¼¢úÿÿÿÿ
+qsquid:S00115#"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¶ÃŸ/
+rsquid:S00115!"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(þï¾Ì
+Vsquid:S1854r":Remove this useless assignment to local variable "dialog".(ŽÒ¸èüÿÿÿÿ
+Gsquid:S1481r"+Remove this unused "dialog" local variable.(ŽÒ¸èüÿÿÿÿ

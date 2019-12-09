@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RessourcesDemo</string>
+    <string name="image1">Image1</string>
+    <string name="image2">Image2</string>
+    <string name="image3">Image3</string>
+    <string name="image4">Image4</string>
+    <string name="image5">Image5</string>
+</resources>

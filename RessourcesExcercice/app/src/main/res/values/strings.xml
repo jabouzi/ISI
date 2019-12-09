@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">RessourcesExcercice</string>
+    <string name="image1">Image1</string>
+    <string name="image2">Image2</string>
+    <string name="image3">Image3</string>
+    <string name="image4">Image4</string>
+    <string name="image5">Image5</string>
+    <string name="image6">Image1</string>
+    <string name="image7">Image2</string>
+    <string name="image8">Image3</string>
+    <string name="image9">Image4</string>
+    <string name="image10">Image5</string>
+    <string name="image11">Image1</string>
+    <string name="image12">Image2</string>
+    <string name="image13">Image3</string>
+    <string name="image14">Image4</string>
+    <string name="image15">Image5</string>
+    <string name="image16">Image1</string>
+    <string name="image17">Image2</string>
+    <string name="image18">Image3</string>
+    <string name="image19">Image4</string>
+    <string name="image20">Image5</string>
+</resources>

@@ -1,0 +1,8 @@
+
+msquid:S1450"VRemove the "mParam1" field and declare it as a local variable in the relevant methods.(•Íï‘
+msquid:S1450"VRemove the "mParam2" field and declare it as a local variable in the relevant methods.(¡ˆ€ 
+Nsquid:S1135"2Complete the task associated to this TODO comment.(ÜûŠ—øÿÿÿÿ
+Nsquid:S1135"2Complete the task associated to this TODO comment.(ğï¢öúÿÿÿÿ
+Nsquid:S1135&"2Complete the task associated to this TODO comment.(ßíŠÿÿÿÿÿ
+Bsquid:S1068"+Remove this unused "mParam1" private field.(•Íï‘
+Bsquid:S1068"+Remove this unused "mParam2" private field.(¡ˆ€ 
