@@ -5,3 +5,5 @@ u
 Eapp/src/main/java/com/skanderjabouzi/fragmentexcercice/Fragment2.java,1/7/17e3c51fbd1011189fb2e350bfc53ff7b94f1298
 x
 Happ/src/main/java/com/skanderjabouzi/fragmentexcercice/MainActivity.java,f/b/fbd90d354cca6b913de5a41dd174fcdb8b02455b
+P
+ app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e

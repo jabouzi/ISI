@@ -1,0 +1,6 @@
+
+dsquid:S1226 "AIntroduce a new variable instead of reusing the parameter "view".(ºßÚÊÿÿÿÿÿ8ç•‚ğ-
+esquid:UselessImportCheck	"5Remove this unused import 'android.widget.ImageView'.(ú¯ëàüÿÿÿÿ8¯ğ-
+hsquid:UselessImportCheck"8Remove this unused import 'android.widget.ArrayAdapter'.( €ŠÑÿÿÿÿÿ8Í•Û®ü-
+nsquid:CommentedOutCodeLine<"<This block of commented-out lines of code should be removed.(•Àºøÿÿÿÿ8Í•Û®ü-
+hsquid:CommentedOutCodeLineA"<This block of commented-out lines of code should be removed.(¥£Ûf8Í•Û®ü-

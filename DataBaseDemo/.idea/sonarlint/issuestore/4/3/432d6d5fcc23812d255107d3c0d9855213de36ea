@@ -1,0 +1,8 @@
+
+Isquid:S1481."+Remove this unused "values" local variable.(Ï±øæ8°²†µğ-
+wsquid:S2293O"YReplace the type specification in this constructor call with the diamond operator ("<>").(½Òİò8Åğµğ-
+Isquid:S1481'"+Remove this unused "values" local variable.(Ï±øæ8„’†µğ-
+Xsquid:S1854.":Remove this useless assignment to local variable "values".(Ï±øæ8°²†µğ-
+gsquid:S2259D"DA "NullPointerException" could be thrown; "cursor" is nullable here.(‰’ïÍûÿÿÿÿ8ƒƒŒµğ-
+ksquid:S11920"HDefine a constant instead of duplicating this literal " id = ?" 3 times.(ä—Ë¾şÿÿÿÿ8ƒƒŒµğ-
+Xsquid:S1854'":Remove this useless assignment to local variable "values".(Ï±øæ8„’†µğ-

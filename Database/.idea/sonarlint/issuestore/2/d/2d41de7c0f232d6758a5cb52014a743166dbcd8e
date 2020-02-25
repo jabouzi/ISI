@@ -1,0 +1,10 @@
+
+|squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÆœåÅÿÿÿÿÿ8¯Õàğ-
+hsquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(“æÑ>8¿óÍãğ-
+isquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(¯ğ³“8÷˜Òãğ-
+esquid:MaximumInheritanceDepth"<This class has 9 parents which is greater than 5 authorized.(²Ú±
+@squid:S2386"Make this member "protected".(ÆœåÅÿÿÿÿÿ8¯Õàğ-
+fsquid:S2259<"HA "NullPointerException" could be thrown; "personList" is nullable here.(°±ğ‰8©ƒıãğ-
+\squid:S1155<">Use isEmpty() to check whether the collection is empty or not.(°±ğ‰8©ƒıãğ-
+Š"squid:ClassVariableVisibilityCheck"PMake list a static final constant or non-public and provide accessors if needed.(ÆœåÅÿÿÿÿÿ8Û—áğ-
+Msquid:S1444"*Make this "public static list" field final(ÆœåÅÿÿÿÿÿ8Û—áğ-

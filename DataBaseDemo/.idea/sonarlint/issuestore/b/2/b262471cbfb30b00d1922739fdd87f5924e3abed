@@ -1,0 +1,7 @@
+
+Msquid:S1444"*Make this "public static list" field final(ýÃ¯¹ýÿÿÿÿ8«ßÍ´ð-
+esquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(²Ú±Ž
+¤squid:S1186'"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷ö«‰ûÿÿÿÿ8Ÿã¢µð-
+Š"squid:ClassVariableVisibilityCheck"PMake list a static final constant or non-public and provide accessors if needed.(ýÃ¯¹ýÿÿÿÿ8«ßÍ´ð-
+|squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ýÃ¯¹ýÿÿÿÿ8‘§Ì´ð-
+@squid:S2386"Make this member "protected".(ýÃ¯¹ýÿÿÿÿ8‘§Ì´ð-

@@ -1,0 +1,6 @@
+
+_squid:UselessImportCheck"4Remove this unused import 'android.content.Context'.(©Ê‰è8ª¸™¨ï-
+nsquid:UselessImportCheck">Remove this unused import 'androidx.appcompat.widget.Toolbar'.(ÔËûİùÿÿÿÿ8ù¡£—ï-
+lsquid:MaximumInheritanceDepth$"<This class has 6 parents which is greater than 5 authorized.(£È•®8ú¿“—ï-
+]squid:UselessImportCheck""-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8×Ë¥–ï-
+ssquid:UselessImportCheck"CRemove this unused import 'androidx.fragment.app.FragmentActivity'.(Êñô–úÿÿÿÿ8ú¿“—ï-

@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html class="sl-root decks show  mz-applicationcache mz-history mz-localstorage mz-svg mz-opacity mz-rgba mz-backgroundsize mz-cssanimations mz-csstransforms mz-csstransforms3d mz-csstransitions mz-flexbox mz-flexboxlegacy mz-fullscreen loaded ua-mac ua-firefox has-visible-scrollbars reveal-is-ready fonts-are-ready" data-account=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Functional Programming in 5 Minutes by G. Kay Lee</title>
+    <meta name="description" content="A presentation created with Slides.">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta property="og:title" content="Functional Programming in 5 Minutes by G. Kay Lee">
+    <meta property="og:description" content="A presentation created with Slides.">
+    <meta property="og:site_name" content="Slides">
+    <meta property="og:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/gsklee/f856f5/functional-programming-in-5-minutes.jpg">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://slides.com/gsklee/functional-programming-in-5-minutes">
+    <meta property="fb:app_id" content="146002942236376">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="manifest" href="http://slides.com/manifest.json">
+
+    <link href="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/css.css" rel="stylesheet" type="text/css" data-application-font="opensans">
+
+    <link href="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/slides-1df814f963530a8557bab503c81c1049.css" media="all" rel="stylesheet">
+    <link href="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/application-4f8dec4da013cdf03461f86ee89541a7.css" media="all" rel="stylesheet">
+    	<link href="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/deck-v1-87f7ca0fe560c7694e2a9ee30adb48b4.css" media="all" rel="stylesheet">
+
+
+
+<style id="user-css-output" type="text/css"></style>
+
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="ue8pFLWwWPlAf5qRQx39t56cLG8TaSjgb6UsW9G/1Bs=" name="csrf-token">
+    <script type="application/javascript" async="" defer="defer" src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/track.js"></script><script type="text/javascript" async="" src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/f7sH7NavrjjvuGxByaw.js"></script><script async="" src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/analytics.js"></script><script type="text/javascript">
+  if( !/dnt=1/.test( window.location.search ) ) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39670045-1', 'auto');
+    ga('send', 'pageview');
+
+  }
+</script>
+    <!--[if lt IE 9]>
+    <script src="//assets.slid.es/assets/html5shiv-b51d49ab0e89834a02ffce4a59905afb.js"></script>
+<![endif]-->
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="Functional Programming in 5 Minutes">
+	<meta name="twitter:description" content="An interactive presentation created with Slides.">
+	<meta name="twitter:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/gsklee/f856f5/functional-programming-in-5-minutes.jpg">
+
+  <style type="text/css"></style><link rel="stylesheet" href="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/merriweathersans.css"><link rel="stylesheet" href="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/oxygen.css"><style type="text/css" media="screen">.uv-icon{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;-moz-transition:all 300ms;-o-transition:all 300ms;-webkit-transition:all 300ms;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;-moz-transition:opacity 100ms;-o-transition:opacity 100ms;-webkit-transition:opacity 100ms;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:white;position:relative;width:325px;height:325px;-moz-transition:background 200ms;-o-transition:background 200ms;-webkit-transition:background 200ms;transition:background 200ms}.uv-bottom .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;-moz-transition:border-top-color 200ms;-o-transition:border-top-color 200ms;-webkit-transition:border-top-color 200ms;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{-moz-transition:none !important;-webkit-transition:none !important;-o-transition:color 0 ease-in !important;transition:none !important}.uv-fade{opacity:1;-moz-transition:opacity 200ms ease-out;-o-transition:opacity 200ms ease-out;-webkit-transition:opacity 200ms ease-out;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;-moz-transition:all 80ms ease-out;-o-transition:all 80ms ease-out;-webkit-transition:all 80ms ease-out;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%);-ms-transform:scale(0.8) translateY(-15%);-webkit-transform:scale(0.8) translateY(-15%);transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%) translateX(-10%);-ms-transform:scale(0.8) translateY(-15%) translateX(-10%);-webkit-transform:scale(0.8) translateY(-15%) translateX(-10%);transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%) translateX(10%);-ms-transform:scale(0.8) translateY(-15%) translateX(10%);-webkit-transform:scale(0.8) translateY(-15%) translateX(10%);transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%);-ms-transform:scale(0.8) translateY(15%);-webkit-transform:scale(0.8) translateY(15%);transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%) translateX(-10%);-ms-transform:scale(0.8) translateY(15%) translateX(-10%);-webkit-transform:scale(0.8) translateY(15%) translateX(-10%);transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%) translateX(10%);-ms-transform:scale(0.8) translateY(15%) translateX(10%);-webkit-transform:scale(0.8) translateY(15%) translateX(10%);transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%);-ms-transform:scale(0.8) translateX(15%);-webkit-transform:scale(0.8) translateX(15%);transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%) translateY(-10%);-ms-transform:scale(0.8) translateX(15%) translateY(-10%);-webkit-transform:scale(0.8) translateX(15%) translateY(-10%);transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%) translateY(10%);-ms-transform:scale(0.8) translateX(15%) translateY(10%);-webkit-transform:scale(0.8) translateX(15%) translateY(10%);transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%);-ms-transform:scale(0.8) translateX(-15%);-webkit-transform:scale(0.8) translateX(-15%);transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%) translateY(-10%);-ms-transform:scale(0.8) translateX(-15%) translateY(-10%);-webkit-transform:scale(0.8) translateX(-15%) translateY(-10%);transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%) translateY(10%);-ms-transform:scale(0.8) translateX(-15%) translateY(10%);-webkit-transform:scale(0.8) translateX(-15%) translateY(10%);transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{-moz-transform:translateY(-100%);-ms-transform:translateY(-100%);-webkit-transform:translateY(-100%);transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{-moz-transform:translateY(100%);-ms-transform:translateY(100%);-webkit-transform:translateY(100%);transform:translateY(100%)}.uv-slide-left.uv-is-hidden{-moz-transform:translateX(-100%);-ms-transform:translateX(-100%);-webkit-transform:translateX(-100%);transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{-moz-transform:translateX(100%);-ms-transform:translateX(100%);-webkit-transform:translateX(100%);transform:translateX(100%)}
+</style><style>a, button, .sl-select, .sl-checkbox label, .radio label { outline: none !important; }</style><script type="text/javascript" async="" src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/embed.js"></script></head>
+  <body>
+    
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll show">
+  <div class="wrapper">
+    <h1 class="logo-animation open">
+      <a class="symbol" href="http://slides.com/">
+        <div class="box-1"></div>
+        <div class="box-2"></div>
+        <div class="box-3"></div>
+      </a>
+      <a class="word" href="http://slides.com/"></a>
+    </h1>
+    <ul class="nav nav-long">
+        <li class="nav-item" data-page-id="home/explore">
+          <a class="nav-item-anchor" href="http://slides.com/explore"><span class="nav-item-label">Explore</span></a>
+        </li>
+        <li class="nav-item" data-page-id="static/features">
+          <a class="nav-item-anchor" href="http://slides.com/features"><span class="nav-item-label">Features</span></a>
+        </li>
+        <li class="nav-item" data-page-id="static/pricing">
+          <a class="nav-item-anchor" href="http://slides.com/pricing"><span class="nav-item-label">Pricing</span></a>
+        </li>
+        <li class="nav-item-divider"></li>
+        <li class="nav-item" data-page-id="sessions/new">
+          <a class="nav-item-anchor" href="http://slides.com/users/sign_in"><span class="nav-item-label">Log in</span></a>
+        </li>
+        <li class="nav-item nav-item-highlighted nav-item-secondary" data-page-id="static/pricing">
+          <a class="nav-item-anchor" href="http://slides.com/pricing"><span class="nav-item-label">Sign up</span></a>
+        </li>
+    </ul>
+  </div>
+</header>
+
+      
+      <div id="main" class="main" role="main">
+        
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-merriweather theme-color-black-mint">
+			<div class="reveal linear center has-dark-background ready" role="application" data-transition-speed="default" data-background-transition="fade">
+				<div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.902571);">
+					<section style="top: 350px; display: none;" aria-hidden="true" class="past" hidden=""><h1 style="text-align: right;">
+    <b>Functional</b>
+</h1>
+<h1 style="text-align: right;">
+    <b>Programming</b>
+</h1>
+<h1 style="text-align: right;">
+    <b>in</b>
+</h1>
+<h1 style="text-align: right;">
+    <b>
+<font color="#f08">5</font> Minutes</b>
+</h1></section><section style="top: 350px; display: none;" aria-hidden="true" class="past" hidden=""><h2><b>Which is impossible</b></h2></section><section style="top: 350px; display: none;" aria-hidden="true" class="past" hidden=""><h2><b>So let's rather try...</b></h2></section><section data-background-color="rgba( 22, 152, 213, 0.6 )" style="top: 350px; display: none;" class="has-dark-background past" aria-hidden="true" hidden=""><h1 style="text-align: right;">
+    <b>Learn to Curry</b>
+</h1>
+<h1 style="text-align: right;">
+    <b>in</b>
+</h1>
+<h1 style="text-align: right;">
+    <b>
+<font color="#f08">5</font> Minutes</b>
+</h1>
+<div style="text-align: right; margin-top: 4em;">
+    <b>
+<a href="http://jsdc.tw/" target="_blank" class="roll"><span data-title="JSDC.tw">JSDC.tw</span></a> 2013 Lightning Talk</b>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="past" hidden=""><img src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/s4lT1NL.jpg" style="position: absolute; top: -250px; left: -310px; max-width: none; max-height: none; margin: 0px; border: none;"><h2 style="font-weight: bold; position: absolute; top: 1000%; color: rgb(0, 0, 0);">Gias Kay Lee</h2>
+<div style="font-weight: bold; position: absolute; top: 1200%; left: 0.5%;">
+<a href="http://gsklee.im/" target="_blank" style="height: 50px;" class="roll"><span data-title="gsklee.im">gsklee.im</span></a>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="past" hidden=""><h2 style="font-weight: bold; position: absolute; z-index: 1; top: 225%;">Currying.</h2>
+<div class="fragment visible" data-fragment-index="0">
+<img src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/gLVZSH1.jpg" style="position: absolute; top: -360px; left: -310px; max-width: none; max-height: none; margin: 0px; border: none;"><p style="font-weight: bold; position: absolute; text-align: left; top: 500%;">Perhaps
+ you've been told by someone before that this is one of those "advanced 
+JavaScript techniques" you'll need to learn to become a true JavaScript 
+ninja.</p>
+</div>
+<div class="fragment visible" data-fragment-index="1">
+<p style="font-weight: bold; position: absolute; top: 1000%; color: rgb(0, 0, 0);">But the truth is...</p>
+</div>
+<p style="color:#000;font-size:9px;position:absolute;right:0;top:1700%">http://commons.wikimedia.org/wiki/File:Phanaeng_kai.jpg</p></section><section style="top: 350px; display: none;" aria-hidden="true" class="past" hidden=""><h2 style="text-align: left;">
+    <b>Currying,</b>
+</h2>
+<p>
+<br></p>
+<div style="text-align: left;">
+<b>is a basic functional programming technique.</b>
+</div>
+<div style="text-align: left;">
+    <b>
+<br></b>
+</div>
+<div class="fragment visible" data-fragment-index="0">
+<div style="text-align: left;">
+<b>And in order to become a true JavaScript ninja,</b>
+</div>
+<div style="text-align: left;">
+<b>what you really need to master is the art of</b>
+</div>
+<p>
+<br></p>
+<h2 style="text-align: left;">
+<b>
+<font color="#0af">Functional Programming.</font>
+</b>
+</h2>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="past" hidden=""><div class="fragment visible" data-fragment-index="0">
+    <div style="display: inline-block; margin-right: 50px;">
+        <h2 style="color: rgb(0, 170, 255);">Lisp</h2>
+        <img src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/BmbbzQT.png" style=""><h2 style="margin: 10px 0px; color: rgb(0, 170, 255);">Scheme</h2>
+        <img src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/BmbbzQT.png" style="-webkit-transform: skewX(30deg) translateX(25px);"><p style="position: absolute; top: 25%; left: 10%;">Functional</p>
+    </div>
+    <div style="display: inline-block;">
+        <h2 style="color: rgb(255, 0, 136);">Smalltalk</h2>
+        <img src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/BmbbzQT.png" style=""><h2 style="margin: 10px 0px; color: rgb(255, 0, 136);">Self</h2>
+        <img src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/BmbbzQT.png" style="-webkit-transform: skewX(-30deg) translateX(-25px);"><p style="position: absolute; top: 25%; left: 70%;">Object-oriented</p>
+    </div>
+    <p style="position: absolute; top: 95%; left: 4.5%;">
+        <b>has half of its root in it.</b>
+    </p>
+</div>
+<h2 style="text-align: left; position: relative; left: 40px;">
+<b>Because <span style="color: rgb(128, 85, 196);">JavaScript</span>
+</b>
+</h2></section><section style="top: 350px; display: none;" aria-hidden="true" class="past" hidden=""><h2>
+    <b>Let's start with something</b>
+</h2>
+<h2>
+<b>familiar</b>
+</h2></section><section style="top: 350px; display: none;" aria-hidden="true" class="past" hidden=""><h2 style="text-align: left;">
+    <b>λ Function </b>
+</h2>
+<p class="fragment visible" style="text-align: left;" data-fragment-index="0">
+<b>AKA Anonymous Function</b>
+</p>
+<div class="fragment visible" style="text-align: right; position: absolute; top: -10%; left: 40%; width: 60%;" data-fragment-index="1">
+<p style="margin-bottom: 20px;">
+<b>originated from a mathematical system called</b>
+</p>
+<h2>
+<b>λ Calculus</b>
+</h2>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="past" hidden=""><h2 style="text-align: left;">
+    <b>λ Calculus</b>
+</h2>
+<div class="fragment visible" data-fragment-index="0">
+<p style="text-align: left;">
+<b>is about <font color="#fa0">simplifying</font> mathematical expressions into
+</b>
+</p>
+<p>
+<br></p>
+<h2 style="text-align: right;">
+    <b>λ Expressions</b>
+</h2>
+</div>
+<p class="fragment visible" style="text-align: right;" data-fragment-index="1">
+<b>to unveil the true nature of underlying computations</b>
+</p></section><section style="top: 350px; display: none;" aria-hidden="true" class="past" hidden=""><h2>
+    <b>To achieve this <font color="#fa0">simplification</font></b>
+</h2></section><section style="top: 350px; display: none;" aria-hidden="true" class="past" hidden=""><p style="position: absolute; top: 0%; width: 100%; z-index: 1;">
+<b>Functions</b>
+</p>
+<p>
+<br></p>
+<h2>
+<b>cube(x) = x * x * x</b>
+</h2>
+<p>
+<br></p>
+<div class="fragment visible" data-fragment-index="0">
+<div style="background-color: rgb(160, 80, 7); width: 400%; height: 400%; position: absolute; top: -150%; left: -150%;">
+</div>
+<h2 style="position: absolute; top: 25%; width: 100%;">
+<b>are expressed without names
+</b>
+</h2>
+<p>
+<br></p>
+<h2 style="position: absolute; top: 80%; width: 100%;">
+<b>(x) → x * x * x
+</b>
+</h2>
+</div></section><section style="top: 231px; display: block;" aria-hidden="true" class="past" hidden=""><p>
+<b>...and can only have</b>
+</p>
+<p>
+<br></p>
+<h2>
+<b>
+<span style="color: rgb(255, 0, 136);">1</span> argument
+</b>
+</h2></section><section style="top: 117.5px; display: block;" aria-hidden="true" class="past" hidden=""><p>
+<b>To handle a</b>
+</p>
+<p>
+<br></p>
+<h2>
+<b>
+<span style="color: rgb(255, 0, 136);">multi</span>-argument function
+</b>
+</h2>
+<p>
+<br></p>
+<p>
+<br></p>
+<p>
+<br></p>
+<p class="fragment visible" data-fragment-index="0">
+<b>it needs to first go through the process of...</b>
+</p></section><section data-background-color="rgba( 200, 50, 30, 0.6 )" style="top: 189px; display: block;" class="has-dark-background present"><h2 style="text-align: left;">
+    <b>Currying (n.)</b>
+</h2>
+<p>
+<br></p>
+<div style="text-align: left;">
+<b>A technique of transforming a multi-argument function in such a way 
+that it can be called as a chain of functions, each with a single 
+argument.</b>
+</div></section><section style="top: 0px; display: block;" aria-hidden="true" class="future" hidden=""><h2 style="position: absolute; z-index: 1; font-weight: bold; top: 1200%;">And the name comes from...</h2>
+<img src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/ph4SPUL.jpg" style="position: absolute; top: -1000%; left: -100%; max-width: none; max-height: none; margin: 0px; border: none;"><p style="color:#000;font-size:9px;position:absolute;right:0;top:1700%">http://commons.wikimedia.org/wiki/File:Curry_Ist.jpg</p></section><section style="top: 0px; display: block;" aria-hidden="true" class="future" hidden=""><img src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/N0uy3hr.png" style="opacity: 0.25; position: absolute; top: -1000%; left: -50%; max-width: none; max-height: none; margin: 0px; border: none;"><h2 style="position: absolute; z-index: 1; font-weight: bold; top: 400%;">Haskell Curry</h2>
+<p style="position: absolute; z-index: 1; font-weight: bold; top: 600%;">(1900 – 1982)</p>
+<div class="fragment" data-fragment-index="0">
+<p style="position: absolute; z-index: 1; font-weight: bold; top: 900%; text-align: right; width: 100%;">also immortalized as the name of</p>
+<p style="position: absolute; z-index: 1; font-weight: bold; top: 1000%; right: 25%; text-align: right; width: 100%;">the popular <span style="color: rgb(0, 170, 255);">pure functional</span> language</p>
+<h2 style="position: absolute; z-index: 1; font-weight: bold; top: 1000%; text-align: right; width: 100%;">Haskell</h2>
+</div>
+<p style="color:#000;font-size:9px;position:absolute;right:0;top:1700%">http://en.wikipedia.org/wiki/File:Haskell-Logo.svg</p></section><section data-background-color="rgba( 255, 255, 255, 0.6 )" style="top: 350px; display: none;" class="has-light-background future" aria-hidden="true" hidden=""><p style="text-align: left; font-weight: bold; margin: 0px 100px 20px; color: rgb(17, 17, 17);">So</p>
+<h2 style="font-weight: bold; color: rgb(17, 17, 17);">(x, y) → x + y</h2>
+<p>
+<br></p>
+<p>
+<br></p>
+<div class="fragment" data-fragment-index="0">
+<p style="text-align: left; font-weight: bold; margin: 0px 100px 20px; color: rgb(17, 17, 17);">can be curried into</p>
+<h2 style="font-weight: bold; color: rgb(17, 17, 17);">x → (y → x + y)</h2>
+</div></section><section data-background-color="rgba( 255, 255, 255, 0.6 )" style="top: 350px; display: none;" class="has-light-background future" aria-hidden="true" hidden=""><p style="text-align: left; font-weight: bold; margin: 0px 100px 20px; color: rgb(17, 17, 17);">Or, in classical notation</p>
+<h2 style="font-weight: bold; color: rgb(17, 17, 17);">f(x, y) = x + y</h2>
+<p>
+<br></p>
+<p>
+<br></p>
+<div class="fragment" data-fragment-index="0">
+<p style="text-align: left; font-weight: bold; margin: 0px 100px 20px; color: rgb(17, 17, 17);">can be curried into</p>
+<h2 style="font-weight: bold; color: rgb(17, 17, 17);">g(x) = y → f(x, y)</h2>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><h2>
+    <b>Still very confusing?</b>
+</h2>
+<p>
+<br></p>
+<p>
+<br></p>
+<p>
+<br></p>
+<h2 class="fragment" data-fragment-index="0">
+<b>Let's speak <span style="color: rgb(128, 85, 196);">JavaScript!</span>
+</b>
+</h2></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><div style="background-color: rgb(20, 98, 135); width: 100%; height: 400%; position: absolute; top: -100%; left: -45%; z-index: -1;">
+</div>
+<div>
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+        <p style="text-align: right;">
+        <b>a multi-argument function</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function<span style="color: rgb(249, 145, 87);">(x, y)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x + y;</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+    </div>
+</div>
+<div class="fragment" style="margin: 50px 0px;" data-fragment-index="0">
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+        <p style="text-align: right;">
+        <b>when curried, will become</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+    </div>
+</div>
+<div class="fragment" data-fragment-index="1">
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+        <p style="text-align: right;">
+        <b>a chain of functions, each</b>
+        </p>
+        <p style="text-align: right;">
+        <b>with a single argument</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function<span style="color: rgb(249, 145, 87);">(x)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return function<span style="color: rgb(249, 145, 87);">(y)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x + y;</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; };</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+    </div>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><div style="background-color: rgb(20, 98, 135); width: 100%; height: 400%; position: absolute; top: -100%; left: -45%; z-index: -1;">
+</div>
+<div>
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+        <p style="text-align: right;">
+        <b>if we give them names</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function </span>
+        <span style="color: rgb(102, 153, 204);">f<span style="color: rgb(249, 145, 87);">(x, y)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x + y;</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+    </div>
+</div>
+<div class="fragment" data-fragment-index="0">
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+<p>
+<br></p>
+        <p style="text-align: right;">
+        <b>then...</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+    <p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function </span>
+        <span style="color: rgb(102, 153, 204);">g<span style="color: rgb(249, 145, 87);">(x)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return function<span style="color: rgb(249, 145, 87);">(y)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x + y;</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; };</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+        <p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">f(<span style="color: rgb(249, 145, 87);">1</span>, <span style="color: rgb(249, 145, 87);">2</span>) === g(<span style="color: rgb(249, 145, 87);">1</span>)(<span style="color: rgb(249, 145, 87);">2</span>);</p>
+    </div>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><div style="background-color: rgb(20, 98, 135); width: 100%; height: 400%; position: absolute; top: -100%; left: -45%; z-index: -1;">
+</div>
+<div>
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+        <p style="text-align: right;">
+        <b>now, since functions are</b>
+        </p>
+        <p style="text-align: right;">
+        <b>first-class citizens...</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+    </div>
+</div>
+<div class="fragment" data-fragment-index="0">
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+<p>
+<br></p>
+        <p style="text-align: right;">
+        <b>we can also do it</b>
+        </p>
+        <p style="text-align: right;">
+        <b>like this</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+<p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function </span>
+        <span style="color: rgb(102, 153, 204);">g<span style="color: rgb(249, 145, 87);">(h)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return function<span style="color: rgb(249, 145, 87);">(y)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span>&nbsp;h(h(y));</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; };</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+<p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(249, 145, 87);">81</span> === g(<span style="color: rgb(204, 153, 204);">function<span style="color: rgb(249, 145, 87);">(x)</span>
+</span>
+ {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x * x;</p>
+<p style="text-align: left; font-weight: bold;">})(<span style="color: rgb(249, 145, 87);">3</span>);</p>
+    </div>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><div style="background-color: rgb(115, 37, 91); width: 100%; height: 400%; position: absolute; top: -100%; left: -45%; z-index: -1;">
+</div>
+<div>
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+    </div>
+    <div style="width: 40%; display: inline-block;">
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function </span>
+        <span style="color: rgb(102, 153, 204);">g<span style="color: rgb(249, 145, 87);">(h)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return function<span style="color: rgb(249, 145, 87);">(y)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span>&nbsp;h(h(y));</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; };</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+    </div>
+</div>
+<div>
+    <div style="width: 50%; display: inline-block; margin-right: 5%;">
+        <p>
+<br></p>
+        <p style="text-align: right;">
+        <b>if we only supply</b>
+        </p>
+        <p style="text-align: right;">
+<b>one of the arguments</b>
+        </p>
+        <p style="text-align: right;">
+        <b>to the curried function...</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block; vertical-align: bottom;">
+        <p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">var </span>n = g(<span style="color: rgb(204, 153, 204);">function<span style="color: rgb(249, 145, 87);">(x)</span>
+        </span>
+        {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x * x;</p>
+        <p style="text-align: left; font-weight: bold;">});</p>
+    </div>
+</div>
+<div class="fragment" data-fragment-index="0">
+    <div style="width: 50%; display: inline-block; margin-right: 5%;">
+<p>
+<br></p>
+        <p style="text-align: right;">
+        <b>we'll be able to reuse it</b>
+        </p>
+        <p style="text-align: right;">
+        <b>like this</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block; vertical-align: bottom;">
+<p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(249, 145, 87);">337</span> === n(<span style="color: rgb(249, 145, 87);">3</span>) + n(<span style="color: rgb(249, 145, 87);">4</span>);
+        </p>
+    </div>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><p>
+<b>This is called</b>
+</p>
+<p>
+<br></p>
+<h2>
+<b>
+Partial Application
+</b>
+</h2>
+<p>
+<br></p>
+<div class="fragment" data-fragment-index="0">
+<div style="background-color: rgb(115, 37, 91); width: 400%; height: 200%; position: absolute; top: 70%; left: -100%; z-index: -1;">
+</div>
+<p>
+<b>and is not the same with currying</b>
+</p>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><div style="background-color: rgb(115, 37, 91); width: 100%; height: 400%; position: absolute; top: -100%; left: -45%; z-index: -1;">
+</div>
+<div>
+    <div style="width: 50%; display: inline-block; margin-right: 5%; vertical-align: top;">
+    <p style="text-align: right;">
+    <b>actually, for functions with</b>
+    </p>
+    <p style="text-align: right;">
+    <b>an arity greater than 2</b>
+    </p>
+    </div>
+    <div style="width: 40%; display: inline-block;">
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(204, 153, 204);">function </span>
+        <span style="color: rgb(102, 153, 204);">f<span style="color: rgb(249, 145, 87);">(x, y, z)</span>
+</span> {</p>
+        <p style="text-align: left; font-weight: bold;">&nbsp; &nbsp; <span style="color: rgb(204, 153, 204);">return</span> x + y + z;</p>
+        <p style="text-align: left; font-weight: bold;">}</p>
+    </div>
+</div>
+<div class="fragment" data-fragment-index="0">
+    <div style="width: 50%; display: inline-block; margin-right: 5%;">
+    <p><br></p>
+        <p style="text-align: right;">
+        <b>the correct way to</b>
+        </p>
+        <p style="text-align: right;">
+        <b>partially apply is through</b>
+        </p>
+        <p style="text-align: right;">
+        <b>bind()</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block; vertical-align: bottom;">
+    <p><br></p>
+        <p style="text-align: left; font-weight: bold;">
+<span style="color: rgb(204, 153, 204);">var </span>f1 = f.bind(<span style="color: rgb(249, 145, 87);">null</span>, <span style="color: rgb(249, 145, 87);">1</span>);</p>
+    </div>
+</div>
+<div class="fragment" data-fragment-index="1">
+    <div style="width: 50%; display: inline-block; margin-right: 5%;">
+<p>
+<br></p>
+        <p style="text-align: right;">
+        <b>call to a partially applied</b>
+        </p>
+        <p style="text-align: right;">
+        <b>function returns the result,</b>
+        </p>
+        <p style="text-align: right;">
+        <b>not another function down</b>
+        </p>
+        <p style="text-align: right;">
+        <b>the currying chain</b>
+        </p>
+    </div>
+    <div style="width: 40%; display: inline-block; vertical-align: bottom;">
+<p>
+<br></p>
+        <p style="text-align: left; font-weight: bold;">
+        <span style="color: rgb(249, 145, 87);">6</span> === f1(<span style="color: rgb(249, 145, 87);">2</span>, <span style="color: rgb(249, 145, 87);">3</span>);
+        </p>
+    </div>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><p>
+<b>Now I guess we're
+</b>
+</p>
+<p>
+<b>
+<br></b>
+</p>
+<h2>
+<b>running low on time</b>
+</h2>
+<p>
+<b>
+<br></b>
+</p>
+<p>
+<b>so...</b>
+</p></section><section data-background-color="rgba( 50, 200, 90, 0.4 )" style="top: 350px; display: none;" class="has-light-background future" aria-hidden="true" hidden=""><h1 style="font-weight: bold;">One last bit</h1>
+<p>
+<br></p>
+<div class="fragment" data-fragment-index="0">
+<p style="text-align: left; font-weight: bold; margin-bottom: 10px;">that the reverse process of currying</p>
+<h2 style="text-align: left; font-weight: bold;">uncurrying</h2>
+</div>
+<div class="fragment" data-fragment-index="1">
+<p style="text-align: right; font-weight: bold;">is closely related with</p>
+<p style="text-align: right; font-weight: bold;">a more familiar concept</p>
+</div>
+<div class="fragment" data-fragment-index="2">
+<div style="text-align: left; background-color: rgb(17, 17, 17); width: 400%; height: 400%; position: absolute; top: -150%; left: -150%; opacity: 0.8;">
+</div>
+<h2 style="font-weight: bold; position: absolute; top: 95%; right: 0px;">
+<font color="#af0">apply.</font>
+</h2>
+</div></section><section style="top: 350px; display: none;" aria-hidden="true" class="future" hidden=""><h1>
+    <b>Questions?</b>
+</h1>
+<p>
+<b>Nah, we're running outta time. Seriously.</b>
+</p>
+<p>
+<br></p>
+<p>
+<br></p>
+<p>
+<b>This slide can be found on
+</b>
+</p>
+<h2>
+<b>
+<a href="https://slid.es/gsklee" target="_blank" class="roll"><span data-title="slid.es/gsklee">slid.es/gsklee</span></a>
+</b>
+</h2></section>
+				</div>
+			<div class="backgrounds"><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" data-background-hash="0rgba( 22, 152, 213, 0.6 )nullnullnull" style="background-color: rgba(22, 152, 213, 0.6); display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: block;" data-loaded="true"></div><div class="slide-background past" style="display: block;" data-loaded="true"></div><div class="slide-background present" data-background-hash="0rgba( 200, 50, 30, 0.6 )nullnullnull" style="background-color: rgba(200, 50, 30, 0.6); display: block;" data-loaded="true"></div><div class="slide-background future" style="display: block;" data-loaded="true"></div><div class="slide-background future" style="display: block;" data-loaded="true"></div><div class="slide-background future" data-background-hash="0rgba( 255, 255, 255, 0.6 )nullnullnull" style="background-color: rgba(255, 255, 255, 0.6); display: none;"></div><div class="slide-background future" data-background-hash="0rgba( 255, 255, 255, 0.6 )nullnullnull" style="background-color: rgba(255, 255, 255, 0.6); display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" data-background-hash="0rgba( 50, 200, 90, 0.4 )nullnullnull" style="background-color: rgba(50, 200, 90, 0.4); display: none;"></div><div class="slide-background future" style="display: none;"></div></div><div class="progress" style="display: block;"><span style="width: 817.759px;"></span></div><aside class="controls" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"></button><button class="navigate-right enabled" aria-label="next slide"></button><button class="navigate-up" aria-label="above slide" disabled="disabled"></button><button class="navigate-down" aria-label="below slide" disabled="disabled"></button></aside><div class="slide-number" style="display: none;"></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"></div><div style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);" id="aria-status-div" aria-live="polite" aria-atomic="true">
+    Currying (n.)
+
+
+
+
+A technique of transforming a multi-argument function in such a way that
+ it can be called as a chain of functions, each with a single argument.
+</div></div>
+		</div>
+	</div>
+
+	<div class="deck-kudos" style="opacity: 1;">
+		<button class="kudos-button kudos-trigger" data-kudos-id="37711" data-kudoed-by-user="false">
+			<div class="kudos-heart">
+				<span class="kudos-icon icon i-heart-fill"></span>
+			</div>
+			<div class="kudos-count" data-kudos-value="211" data-kudos-id="37711"></div>
+		</button>
+	</div>
+
+	<div class="pill summary-pill" style="left: 608px;">
+		<div class="pill-picture" style="background-image: url(https://www.gravatar.com/avatar/4b9046e1a575660d1974e9f34a9653e8?s=140&amp;d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">Functional Programming in 5 Minutes</h4>
+			<p class="pill-description">By G. Kay Lee</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill visible" style="left: 583px;">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">Navigation instructions</h4>
+			<p class="pill-description">Press the space key or click the arrows to the right</p>
+		</div>
+	</div>
+
+</div>
+
+<div class="column">
+	<header class="deck-info">
+		<div class="deck-social">
+			<a href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee&amp;p[summary]=A%20presentation%20created%20with%20Slides.&amp;p[url]=http://slides.com/gsklee/functional-programming-in-5-minutes&amp;p[images][0]=https://s3.amazonaws.com/media-p.slid.es/thumbnails/gsklee/f856f5/functional-programming-in-5-minutes.jpg" class="deck-social-button facebook-share-button" data-tooltip="Share on Facebook">
+				<span class="icon i-facebook"></span>
+			</a>
+			<a href="http://twitter.com/share?text=Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee&amp;url=http%3A%2F%2Fslides.com%2Fgsklee%2Ffunctional-programming-in-5-minutes&amp;via=slides" class="deck-social-button twitter-share-button" data-tooltip="Share on Twitter">
+				<span class="icon i-twitter"></span>
+			</a>
+			<a href="https://plus.google.com/share?url=http%3A%2F%2Fslides.com%2Fgsklee%2Ffunctional-programming-in-5-minutes" class="deck-social-button google-share-button" data-tooltip="Share on Google+">
+			</a>
+		</div>
+
+
+
+		<div class="deck-options">
+			<a class="fullscreen-button" data-tooltip="Fullscreen" href="#"><span class="icon i-fullscreen"></span></a>
+			<a class="comment-button" data-tooltip="Comments" data-scroll-to="" href="#comments" data-scroll-to-offset="-90"><span class="icon i-comment-stroke"></span></a>
+			<a class="share-button" data-tooltip="Share" href="#"><span class="icon i-share"></span></a>
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="details">
+			<div class="deck-info">
+				<h3 class="title">Functional Programming in 5 Minutes</h3>
+				<ul class="deck-meta">
+					<li data-tooltip="Published date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2013-05-15 02:52:45 UTC">4 years ago</time>
+					</li>
+					<li data-tooltip="Kudos" data-tooltip-delay="500">
+						<span class="icon i-heart-fill"></span>
+						<span class="value" data-kudos-value="211" data-kudos-id="37711"></span>
+					</li>
+					<li data-tooltip="Views" data-tooltip-delay="500">
+						<span class="icon i-eye"></span>
+						<span class="value">121,054</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://www.gravatar.com/avatar/4b9046e1a575660d1974e9f34a9653e8?s=140&amp;d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="http://slides.com/gsklee" class="username">G. Kay Lee</a>
+			<a href="http://slides.com/pricing#pro" class="pro-badge">PRO</a>
+		</h3>
+		<p class="description"></p>
+		<ul class="links">
+			 <li><a href="https://github.com/gsklee/" target="_blank"><span class="icon i-link"></span>https://github.com/gsklee/</a></li> 
+			 <li><a href="http://twitter.com/gsklee" target="_blank"><span class="icon i-twitter"></span>gsklee</a></li> 
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+	<section class="comments" id="comments">
+		<div id="disqus_thread"><iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 1px ! important; min-width: 100% ! important; border: medium none ! important; overflow: hidden ! important; height: 2550px ! important;" src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/a.html" horizontalscrolling="no" verticalscrolling="no" width="100%" frameborder="0"></iframe></div>
+	</section>
+
+	<section class="deck-list">
+		<h2>More from <a href="http://slides.com/gsklee">G. Kay Lee</a></h2>
+		<ul class="carousel">
+			<li class="deck-thumbnail">
+  <a class="deck-link" href="http://slides.com/gsklee/es2015-walkthrough-part-i-new-builtin-apis"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/32d356/decks.jpg)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">ES2015+ Walkthrough, Part I: New Builtin APIs</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="http://slides.com/gsklee">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/4b9046e1a575660d1974e9f34a9653e8?s=140&amp;d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">G. Kay Lee</span>
+      </a>
+      <div class="stats">
+        <div>1,197<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="http://slides.com/gsklee/bio-inspired-frontend-engineering"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/c7eb7e/decks.jpg)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Bio-Inspired Frontend Engineering</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="http://slides.com/gsklee">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/4b9046e1a575660d1974e9f34a9653e8?s=140&amp;d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">G. Kay Lee</span>
+      </a>
+      <div class="stats">
+        <div>5,465<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="http://slides.com/gsklee/es6-not-yo-mommas-javascript"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/e7c9b6/decks.jpg)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">ES6: Not Yo Momma's JavaScript</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="http://slides.com/gsklee">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/4b9046e1a575660d1974e9f34a9653e8?s=140&amp;d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">G. Kay Lee</span>
+      </a>
+      <div class="stats">
+        <div>1,600<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="http://slides.com/gsklee/angular-crash-course-1-introduction-to-angularjs"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/gsklee/dedb21/angular-crash-course-1-introduction-to-angularjs-private.jpg)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Angular Crash Course #1: Introduction to AngularJS</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="http://slides.com/gsklee">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/4b9046e1a575660d1974e9f34a9653e8?s=140&amp;d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">G. Kay Lee</span>
+      </a>
+      <div class="stats">
+        <div>2,822<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+
+		</ul>
+	</section>
+
+</div>
+
+      </div>
+      <footer class="global-footer">
+    <div class="link-group">
+      <h5>Product</h5>
+      <a href="http://slides.com/">Home</a>
+      <a href="http://slides.com/explore">Explore</a>
+      <a href="http://slides.com/features">Features</a>
+      <a href="http://slides.com/pricing">Pricing</a>
+      <a href="http://slides.com/developers">Developers</a>
+    </div>
+
+    <div class="link-group">
+      <h5>Help</h5>
+      <a href="http://help.slides.com/" target="_blank">Forum</a>
+      <a href="http://help.slides.com/knowledgebase" target="_blank">Knowledge Base</a>
+      <a href="http://help.slides.com/" data-feedback-mode="smartvote">Leave Feedback</a>
+      <a href="http://help.slides.com/" data-feedback-mode="contact">Report an Issue</a>
+    </div>
+
+    <div class="link-group">
+      <h5>Community</h5>
+      <a href="http://blog.slides.com/" target="_blank">Blog</a>
+      <a href="http://twitter.com/slides" target="_blank">Twitter</a>
+      <a href="http://facebook.com/slidesapp" target="_blank">Facebook</a>
+      <a href="http://plus.google.com/+slidesapp/" rel="publisher" target="_blank">Google+</a>
+    </div>
+
+    <div class="link-group">
+      <h5>Company</h5>
+      <a href="http://slides.com/about">About Slides</a>
+      <a href="http://slides.com/changelog">What's New</a>
+      <a href="http://slides.com/terms">Terms of Service</a>
+      <a href="http://slides.com/privacy">Privacy Policy</a>
+    </div>
+
+    <div class="copyright"><span>© 2017 Slides, Inc.</span></div>
+</footer>
+
+    </div> <!--! end of #container -->
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+    
+<script>
+	var SLConfig = {"deck":{"id":37711,"slug":"functional-programming-in-5-minutes","title":"Functional Programming in 5 Minutes","description":"","width":960,"height":700,"visibility":"all","published_at":"2013-05-15T02:52:45.198Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/gsklee/f856f5/functional-programming-in-5-minutes.jpg","view_count":121054,"user":{"id":36368,"username":"gsklee","name":"G. Kay Lee","description":"","thumbnail_url":"https://www.gravatar.com/avatar/4b9046e1a575660d1974e9f34a9653e8?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":true,"lite":false,"team_id":null,"settings":{"id":101,"present_controls":true,"present_upsizing":true,"present_notes":true}},"background_transition":"fade","transition":"linear","theme_id":null,"theme_font":"merriweather","theme_color":"black-mint","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":true,"center":true,"should_loop":false,"share_notes":null,"slide_number":null,"rtl":false,"version":0,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":null,"font_typekit":null,"font_google":null}};
+</script>
+    <script defer="defer" src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/application-aaed6ce5f9bd5de3833777345d73aaaa.js"></script>
+    	<script defer="defer" src="Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee_files/deck-6dc4e61632c2613e0f30e86ab9893edf.js"></script>
+	
+
+
+  
+
+<iframe style="display: none;"></iframe></body></html>

@@ -1,28 +1,28 @@
 
-Š"squid:ClassVariableVisibilityCheck"PMake lang a static final constant or non-public and provide accessors if needed.(«é·õıÿÿÿÿ8ÒËÛî-
-Fsquid:S2388$"(Prefix this call to "add" with "super.".(ÇÃ™ğ8¡·”î-
-Fsquid:S2388"(Prefix this call to "add" with "super.".(ë˜8¡·”î-
-Fsquid:S2388"(Prefix this call to "add" with "super.".(âÄşÀ8¡·”î-
-Fsquid:S2388%"(Prefix this call to "add" with "super.".(©º¤ó8¡·”î-
-Ksquid:S2388"(Prefix this call to "add" with "super.".(µâìüÿÿÿÿ8¡·”î-
-|squid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(«é·õıÿÿÿÿ8¥ış’î-
-Hsquid:S1444"+Make this "public static image" field final(ëÇĞl8‘Àìî-
-Fsquid:S2388"(Prefix this call to "add" with "super.".(—²ş¿8¡·”î-
-Fsquid:S2388"(Prefix this call to "add" with "super.".(£‚•î8¡·”î-
 Esquid:S2388"(Prefix this call to "add" with "super.".(‚Òÿ48¡·”î-
-Ksquid:S2388"(Prefix this call to "add" with "super.".(ä¿—ıÿÿÿÿ8¡·”î-
-:squid:S2386"Make this member "protected".(ëÇĞl8‘Àìî-
-…"squid:ClassVariableVisibilityCheck"QMake image a static final constant or non-public and provide accessors if needed.(ëÇĞl8‘Àìî-
 Fsquid:S2388#"(Prefix this call to "add" with "super.".(ÙÎ‹Û8¡·”î-
-Fsquid:S2388!"(Prefix this call to "add" with "super.".(÷Ü§ş8¡·”î-
-Ksquid:S2388""(Prefix this call to "add" with "super.".(µŠÏÆûÿÿÿÿ8¡·”î-
-esquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(²Ú±
-vsquid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ëÇĞl8‘Àìî-
-Isquid:S3599",Use another way to initialize this instance.(ëÇĞl8‘Àìî-
+Fsquid:S2388%"(Prefix this call to "add" with "super.".(©º¤ó8¡·”î-
 @squid:S2386"Make this member "protected".(«é·õıÿÿÿÿ8ÒËÛî-
-Fsquid:S2388&"(Prefix this call to "add" with "super.".(Ûù8¡·”î-
-Osquid:S3599",Use another way to initialize this instance.(«é·õıÿÿÿÿ8¥ış’î-
+Fsquid:S2388!"(Prefix this call to "add" with "super.".(÷Ü§ş8¡·”î-
 Esquid:S2388 "(Prefix this call to "add" with "super.".(òæ‘Y8¡·”î-
+Hsquid:S1444"+Make this "public static image" field final(ëÇĞl8‘Àìî-
+Ksquid:S2388"(Prefix this call to "add" with "super.".(µâìüÿÿÿÿ8¡·”î-
+Ksquid:S2388"(Prefix this call to "add" with "super.".(ä¿—ıÿÿÿÿ8¡·”î-
+Fsquid:S2388"(Prefix this call to "add" with "super.".(ë˜8¡·”î-
+Fsquid:S2388&"(Prefix this call to "add" with "super.".(Ûù8¡·”î-
+vsquid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ëÇĞl8‘Àìî-
+Ksquid:S2388""(Prefix this call to "add" with "super.".(µŠÏÆûÿÿÿÿ8¡·”î-
+Isquid:S3599",Use another way to initialize this instance.(ëÇĞl8‘Àìî-
 Msquid:S1444"*Make this "public static lang" field final(«é·õıÿÿÿÿ8ÒËÛî-
+…"squid:ClassVariableVisibilityCheck"QMake image a static final constant or non-public and provide accessors if needed.(ëÇĞl8‘Àìî-
 asquid:UselessImportCheck
 "1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ8şûÙî-
+Fsquid:S2388"(Prefix this call to "add" with "super.".(âÄşÀ8¡·”î-
+Š"squid:ClassVariableVisibilityCheck"PMake lang a static final constant or non-public and provide accessors if needed.(«é·õıÿÿÿÿ8ÒËÛî-
+:squid:S2386"Make this member "protected".(ëÇĞl8‘Àìî-
+|squid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(«é·õıÿÿÿÿ8¥ış’î-
+Fsquid:S2388"(Prefix this call to "add" with "super.".(—²ş¿8¡·”î-
+esquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(²Ú±
+Osquid:S3599",Use another way to initialize this instance.(«é·õıÿÿÿÿ8¥ış’î-
+Fsquid:S2388"(Prefix this call to "add" with "super.".(£‚•î8¡·”î-
+Fsquid:S2388$"(Prefix this call to "add" with "super.".(ÇÃ™ğ8¡·”î-

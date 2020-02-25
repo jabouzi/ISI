@@ -97,9 +97,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void showDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
         builder.setTitle("Alert Dialog");
         builder.setMessage("This is an alert dialog example");
-
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked OK button

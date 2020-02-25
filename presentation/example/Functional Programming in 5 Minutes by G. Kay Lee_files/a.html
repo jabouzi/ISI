@@ -1,0 +1,2413 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" dir="ltr" class="ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" dir="ltr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html dir="ltr" class="js no-touch localstorage sessionstorage contenteditable use-opacity-transitions" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Disqus Comments</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+        .alert--warning {
+            border-radius: 3px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #FFE070;
+            color: #A47703;
+        }
+
+        .alert--warning a,
+        .alert--warning a:hover,
+        .alert--warning strong {
+            color: #A47703;
+            font-weight: bold;
+        }
+
+        .alert--error p,
+        .alert--warning p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        </style>
+    
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        #error {
+            display: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        
+    </style>
+
+<link rel="prefetch" href="a_data/lounge.js"><link rel="prefetch" href="a_data/config.js"><link rel="stylesheet" href="a_data/lounge.css"><script src="a_data/cbgapi.js" async=""></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lounge/main" src="a_data/lounge.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="remote/config" src="a_data/config.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ga" src="a_data/ga.js"></script><style id="css_1488418546084"></style><!-- base href="https://disqus.com/embed/comments/?base=default&version=fbe5a2d3e47779b1f7a40136dabc24cf&f=slidesapp&t_i=37711&t_u=http%3A%2F%2Fslides.com%2Fgsklee%2Ffunctional-programming-in-5-minutes&t_d=Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee&t_t=Functional%20Programming%20in%205%20Minutes%20by%20G.%20Kay%20Lee&s_o=default" --><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="fb" src="a_data/sdk.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="gapi" src="a_data/api.js" gapi_processed="true"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body>
+    
+
+    
+    <div id="error" class="alert--error">
+        <p>We were unable to load Disqus. If you are a moderator please see our <a href="https://docs.disqus.com/help/83/"> troubleshooting guide</a>. </p>
+    </div>
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"audienceSyncVerified":false,"mustVerify":false,"canReply":true,"mustVerifyEmail":false},"features":{},"forum":{"raw_guidelines":null,"twitterName":"","guidelines":null,"favicon":{"permalink":"https://disqus.com/api/forums/favicons/slidesapp.jpg","cache":"https://c.disquscdn.com/uploads/forums/230/7674/favicon.png"},"id":"slidesapp","createdAt":"2013-04-23T12:36:10.050693","category":"Business","founder":"48926953","daysAlive":0,"installCompleted":true,"pk":"2307674","channel":null,"description":"\u003cp>The easiest way to create and share beautiful presentations.\u003c/p>","raw_description":"The easiest way to create and share beautiful presentations.","permissions":{},"name":"Slides","language":"en","settings":{"supportLevel":0,"adsDRNativeEnabled":false,"colorScheme":"auto","adsVideoEnabled":false,"allowAnonPost":false,"ssoRequired":false,"unapproveLinks":false,"linkAffiliationEnabled":false,"adsProductLinksThumbnailsEnabled":false,"adsProductStoriesEnabled":false,"organicDiscoveryEnabled":false,"disable3rdPartyTrackers":false,"adsProductDisplayEnabled":false,"discoveryMax":false,"adsProductLinksEnabled":false,"hasCustomAvatar":false,"moderatorText":"","adsEnabled":false,"adsPositionTopEnabled":false,"allowMedia":true,"adultContent":false,"promotedDiscoveryEnabled":false,"allowAnonVotes":false,"adsProductVideoEnabled":false,"mustVerify":true,"discoveryThumbnailsEnabled":false,"mustVerifyEmail":true,"audienceSyncEnabled":false,"typeface":"auto","adsPositionBottomEnabled":false,"mediaembedEnabled":true,"discoveryLocked":false,"validateAllPosts":false,"adsSettingsLocked":false,"isVIP":false,"adsPositionInthreadEnabled":false},"url":"http://slid.es/","daysThreadAlive":0,"avatar":{"small":{"permalink":"https://disqus.com/api/forums/avatars/slidesapp.jpg?size=32","cache":"//a.disquscdn.com/1488308563/images/noavatar32.png"},"large":{"permalink":"https://disqus.com/api/forums/avatars/slidesapp.jpg?size=92","cache":"//a.disquscdn.com/1488308563/images/noavatar92.png"}},"signedUrl":"http://disq.us/?url=http%3A%2F%2Fslid.es%2F&key=GJG2u2aT1U5o_qIWuGLrsw"}}</script>
+
+    
+    <script type="text/json" id="disqus-threadData">{"cursor":{"hasPrev":false,"prev":null,"total":19,"hasNext":false,"next":"1:0:0"},"code":0,"response":{"lastModified":1397504532,"posts":[{"dislikes":0,"numReports":0,"likes":8,"message":"\u003cp>Interesting.\u003c/p>\u003cp>My only question is: What benefits provide functional programming in JS?\u003c/p>\u003cp>I've programmed a little bit in Haskell, also like abusing map/reduce in Ruby, but I can't grasp the usefulness of FP in JS.\u003cbr>Care to explain?\u003c/p>\u003cp>Thanks!\u003c/p>","id":"902189442","isHighlighted":false,"author":{"username":"google-fd2cb6191c7c34d2f5caa3c297e35e07","about":"","name":"Bartosz Zawada","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.244332,"profileUrl":"https://disqus.com/by/google-fd2cb6191c7c34d2f5caa3c297e35e07/","url":"","reputation":1.244332,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-05-19T17:36:33","id":"51244999","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/google-fd2cb6191c7c34d2f5caa3c297e35e07.jpg","cache":"https://c.disquscdn.com/uploads/users/5124/4999/avatar32.jpg?1368985209"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/google-fd2cb6191c7c34d2f5caa3c297e35e07.jpg","cache":"https://c.disquscdn.com/uploads/users/5124/4999/avatar92.jpg?1368985209","large":{"permalink":"https://disqus.com/api/users/avatars/google-fd2cb6191c7c34d2f5caa3c297e35e07.jpg","cache":"https://c.disquscdn.com/uploads/users/5124/4999/avatar92.jpg?1368985209"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-05-19T17:40:08","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Interesting.\n\nMy only question is: What benefits provide functional programming in JS?\n\nI've programmed a little bit in Haskell, also like abusing map/reduce in Ruby, but I can't grasp the usefulness of FP in JS.\nCare to explain?\n\n\n\nThanks!","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":0,"points":8,"moderationLabels":[],"isEdited":true},{"dislikes":0,"numReports":0,"likes":2,"message":"\u003cp>Referential transparency allows equational reasoning. In short, whenever you see function application you can replace it with that function's code but with arguments replaced with what you passed in (look at beta reduction from lambda calculus for an example). You can now reason about these programs as just function calls. That's all your program becomes.\u003c/p>\u003cp>When you perform side-effects, you don't have referential transparency. You can't reason about your program as just function application, you have to think about it about state transitions (e.g. o.x was 1 and calling function f makes o.x equal to 2). It's much harder to prove that your code will do what you intended. You'll certainly have more bugs.\u003c/p>","id":"902362464","isHighlighted":false,"author":{"username":"pufuwozu","about":"","name":"Brian McKenna","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2739779999999998,"profileUrl":"https://disqus.com/by/pufuwozu/","url":"http://brianmckenna.org/","reputation":1.2739779999999998,"location":"Brisbane, Australia","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fbrianmckenna.org%2F&key=JYBh8gmvEsuI33jma2GFnQ","isPrimary":true,"joinedAt":"2010-04-26T22:51:23","id":"2801547","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/pufuwozu.jpg","cache":"https://c.disquscdn.com/uploads/users/280/1547/avatar32.jpg?1485319223"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/pufuwozu.jpg","cache":"https://c.disquscdn.com/uploads/users/280/1547/avatar92.jpg?1485319223","large":{"permalink":"https://disqus.com/api/users/avatars/pufuwozu.jpg","cache":"https://c.disquscdn.com/uploads/users/280/1547/avatar92.jpg?1485319223"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-05-19T21:23:49","parent":902189442,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Referential transparency allows equational reasoning. In short, whenever you see function application you can replace it with that function's code but with arguments replaced with what you passed in (look at beta reduction from lambda calculus for an example). You can now reason about these programs as just function calls. That's all your program becomes.\n\n\nWhen you perform side-effects, you don't have referential transparency. You can't reason about your program as just function application, you have to think about it about state transitions (e.g. o.x was 1 and calling function f makes o.x equal to 2). It's much harder to prove that your code will do what you intended. You'll certainly have more bugs.","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":1,"points":2,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>That explains the benefits of equational reasoning, but not of functional programming in JavaScript. Equational reasoning doesn't apply in JavaScript because it's not pure: it's hard to know whether a given function has side effects or not.\u003c/p>\u003cp>A functional style of programming within an imperative language is still valuable for several reasons. For one, you can at least use equational \"intuition\" in some places (although it's a dangerous way to reason). But more often, functional techniques just give you flexibility to do things in new ways, which might save you time, depending on what path you take in your hacking process.\u003c/p>\u003cp>(I'd argue that the technique demonstrated in this presentation is just a programming technique, which happens to come from the community of functional programming. It is especially valuable in concert with other functional-programming techniques, but it is a useful tool even without those.)\u003c/p>\u003cp>Currying functions and otherwise using function transformers may allow you to solve some programming problem that would otherwise be more laborious to solve. For example, you may find yourself wanting a whole family of callbacks that only differ by some parameter (say an animation speed). Partial application gives you an easy way to create those.\u003c/p>","id":"927183443","isHighlighted":false,"author":{"username":"ezrakilty","about":"","name":"ezrakilty","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2342629999999999,"profileUrl":"https://disqus.com/by/ezrakilty/","url":"","reputation":1.2342629999999999,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2010-01-07T00:20:53","id":"1540650","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ezrakilty.jpg","cache":"https://c.disquscdn.com/uploads/users/154/650/avatar32.jpg?1371003003"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ezrakilty.jpg","cache":"https://c.disquscdn.com/uploads/users/154/650/avatar92.jpg?1371003003","large":{"permalink":"https://disqus.com/api/users/avatars/ezrakilty.jpg","cache":"https://c.disquscdn.com/uploads/users/154/650/avatar92.jpg?1371003003"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-06-12T01:18:25","parent":902362464,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"That explains the benefits of equational reasoning, but not of functional programming in JavaScript. Equational reasoning doesn't apply in JavaScript because it's not pure: it's hard to know whether a given function has side effects or not.\n\nA functional style of programming within an imperative language is still valuable for several reasons. For one, you can at least use equational \"intuition\" in some places (although it's a dangerous way to reason). But more often, functional techniques just give you flexibility to do things in new ways, which might save you time, depending on what path you take in your hacking process.\n\n(I'd argue that the technique demonstrated in this presentation is just a programming technique, which happens to come from the community of functional programming. It is especially valuable in concert with other functional-programming techniques, but it is a useful tool even without those.)\n\nCurrying functions and otherwise using function transformers may allow you to solve some programming problem that would otherwise be more laborious to solve. For example, you may find yourself wanting a whole family of callbacks that only differ by some parameter (say an animation speed). Partial application gives you an easy way to create those.","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":2,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>JavaScript doesn't enforce purity but you can write pure functions in JavaScript. Functional programming.\u003c/p>","id":"927185410","isHighlighted":false,"author":{"username":"pufuwozu","about":"","name":"Brian McKenna","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2739779999999998,"profileUrl":"https://disqus.com/by/pufuwozu/","url":"http://brianmckenna.org/","reputation":1.2739779999999998,"location":"Brisbane, Australia","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fbrianmckenna.org%2F&key=JYBh8gmvEsuI33jma2GFnQ","isPrimary":true,"joinedAt":"2010-04-26T22:51:23","id":"2801547","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/pufuwozu.jpg","cache":"https://c.disquscdn.com/uploads/users/280/1547/avatar32.jpg?1485319223"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/pufuwozu.jpg","cache":"https://c.disquscdn.com/uploads/users/280/1547/avatar92.jpg?1485319223","large":{"permalink":"https://disqus.com/api/users/avatars/pufuwozu.jpg","cache":"https://c.disquscdn.com/uploads/users/280/1547/avatar92.jpg?1485319223"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-06-12T01:21:40","parent":927183443,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"JavaScript doesn't enforce purity but you can write pure functions in JavaScript. Functional programming.","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":3,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>And then you can't use equational reasoning because somebody else wrote an impure function. Or perhaps you want to use the DOM.\u003c/p>","id":"927216807","isHighlighted":false,"author":{"username":"ezrakilty","about":"","name":"ezrakilty","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2342629999999999,"profileUrl":"https://disqus.com/by/ezrakilty/","url":"","reputation":1.2342629999999999,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2010-01-07T00:20:53","id":"1540650","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ezrakilty.jpg","cache":"https://c.disquscdn.com/uploads/users/154/650/avatar32.jpg?1371003003"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ezrakilty.jpg","cache":"https://c.disquscdn.com/uploads/users/154/650/avatar92.jpg?1371003003","large":{"permalink":"https://disqus.com/api/users/avatars/ezrakilty.jpg","cache":"https://c.disquscdn.com/uploads/users/154/650/avatar92.jpg?1371003003"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-06-12T02:10:00","parent":927185410,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"And then you can't use equational reasoning because somebody else wrote an impure function. Or perhaps you want to use the DOM.","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":4,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Both can be trivially wrapped to become referentially transparent. IO monad. Instantly gain referential transparency. Done in impure languages all the time.\u003c/p>","id":"927270304","isHighlighted":false,"author":{"username":"pufuwozu","about":"","name":"Brian McKenna","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2739779999999998,"profileUrl":"https://disqus.com/by/pufuwozu/","url":"http://brianmckenna.org/","reputation":1.2739779999999998,"location":"Brisbane, Australia","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fbrianmckenna.org%2F&key=JYBh8gmvEsuI33jma2GFnQ","isPrimary":true,"joinedAt":"2010-04-26T22:51:23","id":"2801547","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/pufuwozu.jpg","cache":"https://c.disquscdn.com/uploads/users/280/1547/avatar32.jpg?1485319223"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/pufuwozu.jpg","cache":"https://c.disquscdn.com/uploads/users/280/1547/avatar92.jpg?1485319223","large":{"permalink":"https://disqus.com/api/users/avatars/pufuwozu.jpg","cache":"https://c.disquscdn.com/uploads/users/280/1547/avatar92.jpg?1485319223"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-06-12T03:26:35","parent":927216807,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Both can be trivially wrapped to become referentially transparent. IO monad. Instantly gain referential transparency. Done in impure languages all the time.","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":5,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":5,"message":"\u003cp>i think right way is to learn functional programming is by solving problems in a pure functional language. that way you can apply those skills and mind set to imperative programming. i don't see any other way to learn fp.\u003c/p>","id":"902154089","isHighlighted":false,"author":{"username":"ooooak","about":"","name":"ooooak","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.216245,"profileUrl":"https://disqus.com/by/ooooak/","url":"","reputation":1.216245,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2012-06-16T08:17:15","id":"27529998","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ooooak.jpg","cache":"https://c.disquscdn.com/uploads/users/2752/9998/avatar32.jpg?1403497034"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ooooak.jpg","cache":"https://c.disquscdn.com/uploads/users/2752/9998/avatar92.jpg?1403497034","large":{"permalink":"https://disqus.com/api/users/avatars/ooooak.jpg","cache":"https://c.disquscdn.com/uploads/users/2752/9998/avatar92.jpg?1403497034"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-05-19T16:45:11","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"i think right way is to learn functional programming is by solving problems in a pure functional language. that way you can apply those skills and mind set to imperative programming. i don't see any other way to learn fp.","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":0,"points":5,"moderationLabels":[],"isEdited":true},{"dislikes":1,"numReports":0,"likes":4,"message":"\u003cp>Brilliant!\u003c/p>","id":"902202096","isHighlighted":false,"author":{"username":"abhishek_hingnikar","about":"","name":"Abhishek Hingnikar","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.244407,"profileUrl":"https://disqus.com/by/abhishek_hingnikar/","url":"","reputation":1.244407,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-09-11T08:31:36","id":"72586797","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/abhishek_hingnikar.jpg","cache":"//a.disquscdn.com/1488308563/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/abhishek_hingnikar.jpg","cache":"//a.disquscdn.com/1488308563/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/abhishek_hingnikar.jpg","cache":"//a.disquscdn.com/1488308563/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-05-19T18:00:42","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Brilliant!","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":0,"points":3,"moderationLabels":[],"isEdited":false},{"dislikes":1,"numReports":0,"likes":2,"message":"\u003cp>amazing presentation!\u003c/p>","id":"901864831","isHighlighted":false,"author":{"username":"juanfatas","about":"","name":"juanfatas","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.33199,"profileUrl":"https://disqus.com/by/juanfatas/","url":"","reputation":1.33199,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2011-11-01T01:21:46","id":"18566384","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/juanfatas.jpg","cache":"https://c.disquscdn.com/uploads/users/1856/6384/avatar32.jpg?1448345788"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/juanfatas.jpg","cache":"https://c.disquscdn.com/uploads/users/1856/6384/avatar92.jpg?1448345788","large":{"permalink":"https://disqus.com/api/users/avatars/juanfatas.jpg","cache":"https://c.disquscdn.com/uploads/users/1856/6384/avatar92.jpg?1448345788"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-05-19T09:18:26","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"amazing presentation!","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":0,"points":1,"moderationLabels":[],"isEdited":false},{"dislikes":1,"numReports":0,"likes":1,"message":"\u003cp>Awesome!!\u003c/p>","id":"902303830","isHighlighted":false,"author":{"username":"twitter-107009445","about":"","name":"Mohammed Habib","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.233698,"profileUrl":"https://disqus.com/by/twitter-107009445/","url":"http://twitter.com/mr_potatoes","reputation":1.233698,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Ftwitter.com%2Fmr_potatoes&key=CH2iEgqfEwnp8v0sfJRhfw","isPrimary":true,"joinedAt":"2012-02-25T07:49:30","id":"22830822","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/twitter-107009445.jpg","cache":"https://c.disquscdn.com/uploads/users/2283/822/avatar32.jpg?1368995447"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/twitter-107009445.jpg","cache":"https://c.disquscdn.com/uploads/users/2283/822/avatar92.jpg?1368995447","large":{"permalink":"https://disqus.com/api/users/avatars/twitter-107009445.jpg","cache":"https://c.disquscdn.com/uploads/users/2283/822/avatar92.jpg?1368995447"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-05-19T20:30:45","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Awesome!!","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":1,"numReports":0,"likes":1,"message":"\u003cp>thank you!\u003c/p>","id":"901948243","isHighlighted":false,"author":{"username":"zx1986","about":"","name":"zx1986","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.341734,"profileUrl":"https://disqus.com/by/zx1986/","url":"","reputation":1.341734,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2012-04-19T14:05:22","id":"25054593","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/zx1986.jpg","cache":"https://c.disquscdn.com/uploads/users/2505/4593/avatar32.jpg?1484377139"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/zx1986.jpg","cache":"https://c.disquscdn.com/uploads/users/2505/4593/avatar92.jpg?1484377139","large":{"permalink":"https://disqus.com/api/users/avatars/zx1986.jpg","cache":"https://c.disquscdn.com/uploads/users/2505/4593/avatar92.jpg?1484377139"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-05-19T11:55:42","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"thank you!","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":1,"numReports":0,"likes":0,"message":"\u003cp>hate animated powerpoint replacements that dont even let you click through at your own pace.\u003c/p>","id":"902728953","isHighlighted":false,"author":{"username":"steveridaker","about":"","name":"steve ridaker","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.232124,"profileUrl":"https://disqus.com/by/steveridaker/","url":"","reputation":1.232124,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-05-20T08:36:19","id":"51294670","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/steveridaker.jpg","cache":"https://c.disquscdn.com/uploads/users/5129/4670/avatar32.jpg?1369038986"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/steveridaker.jpg","cache":"https://c.disquscdn.com/uploads/users/5129/4670/avatar92.jpg?1369038986","large":{"permalink":"https://disqus.com/api/users/avatars/steveridaker.jpg","cache":"https://c.disquscdn.com/uploads/users/5129/4670/avatar92.jpg?1369038986"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-05-20T08:36:25","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"hate animated powerpoint replacements that dont even let you click through at your own pace.","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":0,"points":-1,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>No? Have you tried the arrow keys? Ah.. you meant the animation speed limitation... Click somewhere on the progress bar at the bottom of the presentation to jump directly to that slide (and if it's more than one slide away, the animation will be skipped). This is soo much cleaner and (I think) better than PowerPoint. Also, if you hold (or press quickly) the arrow key, it will fast-scroll through the slides. Brilliant.\u003c/p>","id":"955582486","isHighlighted":false,"author":{"username":"leonardpauli","about":"","name":"Leonard Pauli","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2329599999999998,"profileUrl":"https://disqus.com/by/leonardpauli/","url":"","reputation":1.2329599999999998,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-07-08T19:48:58","id":"61322975","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/leonardpauli.jpg","cache":"https://c.disquscdn.com/uploads/users/6132/2975/avatar32.jpg?1432130668"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/leonardpauli.jpg","cache":"https://c.disquscdn.com/uploads/users/6132/2975/avatar92.jpg?1432130668","large":{"permalink":"https://disqus.com/api/users/avatars/leonardpauli.jpg","cache":"https://c.disquscdn.com/uploads/users/6132/2975/avatar92.jpg?1432130668"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-07-08T19:49:04","parent":902728953,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"No? Have you tried the arrow keys? Ah.. you meant the animation speed limitation... Click somewhere on the progress bar at the bottom of the presentation to jump directly to that slide (and if it's more than one slide away, the animation will be skipped). This is soo much cleaner and (I think) better than PowerPoint. Also, if you hold (or press quickly) the arrow key, it will fast-scroll through the slides. Brilliant.","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":1,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":1,"numReports":0,"likes":0,"message":"\u003cp>Fantistic!\u003c/p>","id":"902624258","isHighlighted":false,"author":{"username":"disqus_Qjv8Ueug8e","about":"","name":"meme","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2335019999999999,"profileUrl":"https://disqus.com/by/disqus_Qjv8Ueug8e/","url":"http://justme0.com","reputation":1.2335019999999999,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fjustme0.com&key=__AXeXVJQzL41o9vsdfzyA","isPrimary":true,"joinedAt":"2013-05-20T03:42:38","id":"51281138","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_Qjv8Ueug8e.jpg","cache":"https://c.disquscdn.com/uploads/users/5128/1138/avatar32.jpg?1457099227"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_Qjv8Ueug8e.jpg","cache":"https://c.disquscdn.com/uploads/users/5128/1138/avatar92.jpg?1457099227","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_Qjv8Ueug8e.jpg","cache":"https://c.disquscdn.com/uploads/users/5128/1138/avatar92.jpg?1457099227"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-05-20T03:42:51","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Fantistic!","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":0,"points":-1,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>thanks - that was useful.\u003c/p>","id":"938910944","isHighlighted":false,"author":{"username":"gmilby","about":"","name":"gmilby","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2426979999999999,"profileUrl":"https://disqus.com/by/gmilby/","url":"","reputation":1.2426979999999999,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2010-02-04T17:39:58","id":"1810295","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/gmilby.jpg","cache":"https://c.disquscdn.com/uploads/users/181/295/avatar32.jpg?1370142275"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/gmilby.jpg","cache":"https://c.disquscdn.com/uploads/users/181/295/avatar92.jpg?1370142275","large":{"permalink":"https://disqus.com/api/users/avatars/gmilby.jpg","cache":"https://c.disquscdn.com/uploads/users/181/295/avatar92.jpg?1370142275"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-06-22T23:58:45","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"thanks - that was useful.","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Prepared cleverly. Keep up the good work !\u003c/p>","id":"927669672","isHighlighted":false,"author":{"username":"ensartopba","about":"","name":"Ensar Topba\u015f","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.232124,"profileUrl":"https://disqus.com/by/ensartopba/","url":"","reputation":1.232124,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-06-12T13:56:39","id":"56279148","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ensartopba.jpg","cache":"https://c.disquscdn.com/uploads/users/5627/9148/avatar32.jpg?1371045406"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ensartopba.jpg","cache":"https://c.disquscdn.com/uploads/users/5627/9148/avatar92.jpg?1371045406","large":{"permalink":"https://disqus.com/api/users/avatars/ensartopba.jpg","cache":"https://c.disquscdn.com/uploads/users/5627/9148/avatar92.jpg?1371045406"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-06-12T13:56:45","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Prepared cleverly. Keep up the good work !","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Thanks!\u003c/p>","id":"928633836","isHighlighted":false,"author":{"username":"giaskaylee","about":"","name":"Gias Kay Lee","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2814349999999999,"profileUrl":"https://disqus.com/by/giaskaylee/","url":"http://gsklee.im/","reputation":1.2814349999999999,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fgsklee.im%2F&key=3hCW5aaEhbErS7lnY0cwSA","isPrimary":true,"joinedAt":"2013-04-05T10:50:30","id":"47380908","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/giaskaylee.jpg","cache":"https://c.disquscdn.com/uploads/users/4738/908/avatar32.jpg?1461658227"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/giaskaylee.jpg","cache":"https://c.disquscdn.com/uploads/users/4738/908/avatar92.jpg?1461658227","large":{"permalink":"https://disqus.com/api/users/avatars/giaskaylee.jpg","cache":"https://c.disquscdn.com/uploads/users/4738/908/avatar92.jpg?1461658227"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-06-13T05:45:36","parent":927669672,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Thanks!","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":1,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>cool and interesting\u003c/p>","id":"922013310","isHighlighted":false,"author":{"username":"shaan360","about":"We Make Things For Social Good @uExel","name":"Guest","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.214553,"profileUrl":"https://disqus.com/by/shaan360/","url":"http://www.uexel.com/","reputation":1.214553,"location":"Pakistan","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.uexel.com%2F&key=QO5YbmZ157jM1QEVnzgITQ","isPrimary":true,"joinedAt":"2009-12-18T22:16:50","id":"1421842","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/shaan360.jpg","cache":"//a.disquscdn.com/1488308563/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/shaan360.jpg","cache":"//a.disquscdn.com/1488308563/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/shaan360.jpg","cache":"//a.disquscdn.com/1488308563/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-06-07T08:08:10","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"cool and interesting","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Cool, very refreshing approach on lambda calculus :) thanks\u003c/p>","id":"920941540","isHighlighted":false,"author":{"username":"miezanechimane","about":"","name":"Miezan Echimane","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2336,"profileUrl":"https://disqus.com/by/miezanechimane/","url":"","reputation":1.2336,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-06-06T12:45:25","id":"55035111","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/miezanechimane.jpg","cache":"https://c.disquscdn.com/uploads/users/5503/5111/avatar32.jpg?1377970552"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/miezanechimane.jpg","cache":"https://c.disquscdn.com/uploads/users/5503/5111/avatar92.jpg?1377970552","large":{"permalink":"https://disqus.com/api/users/avatars/miezanechimane.jpg","cache":"https://c.disquscdn.com/uploads/users/5503/5111/avatar92.jpg?1377970552"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2013-06-06T12:46:20","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Cool, very refreshing approach on lambda calculus :) thanks","canVote":false,"thread":"1289279878","forum":"slidesapp","depth":0,"points":0,"moderationLabels":[],"isEdited":false}],"thread":{"feed":"https://slidesapp.disqus.com/functional_programming_in_5_minutes_by_gias_kay_lee/latest.rss","identifiers":["37711"],"dislikes":0,"likes":8,"message":"","id":"1289279878","createdAt":"2013-05-15T03:17:48","category":"2342519","author":"48926953","isSpam":false,"signedLink":"http://disq.us/?url=http%3A%2F%2Fslid.es%2Fgsklee%2Ffunctional-programming-in-5-minutes&key=UyD90Vzlmax1nqlRi0pbQQ","isDeleted":false,"hasStreaming":false,"raw_message":"","isClosed":false,"link":"http://slid.es/gsklee/functional-programming-in-5-minutes","slug":"functional_programming_in_5_minutes_by_gias_kay_lee","forum":"slidesapp","clean_title":"Functional Programming in 5 Minutes by Gias Kay Lee","posts":19,"moderators":[48926953],"title":"Functional Programming in 5 Minutes by Gias Kay Lee","highlightedPost":null}},"order":"popular"}</script>
+
+    
+
+    <div id="fixed-content"></div>
+
+
+    
+        
+<script type="text/json" id="disqus-urls">{
+    "root":"//disqus.com",
+    "next":"https://c.disquscdn.com/next/current/embed"
+}</script>
+
+        <script src="a_data/lounge_002.js" id="bootstrap-script" data-app="lounge" crossorigin="anonymous" async=""></script>
+    
+
+
+<script src="a_data/common.js"></script><iframe style="display: none;"></iframe><div id="layout" data-tracking-area="layout">
+
+<div id="onboard" data-tracking-area="onboard"><div></div></div>
+
+<div id="highlighted-post" data-tracking-area="highlighted" class="highlighted-post" style="display: none;"></div>
+
+<div id="global-alert"></div>
+
+<header id="main-nav" data-tracking-area="main-nav">
+<nav class="nav nav-primary">
+<ul>
+<li class="nav-tab nav-tab--primary tab-conversation active" data-role="post-count"><a class="publisher-nav-color">
+<span class="comment-count">
+19 comments
+</span>
+
+<span class="comment-count-placeholder">
+Comments
+</span>
+</a>
+</li>
+<li class="nav-tab nav-tab--primary tab-community">
+<a href="https://disqus.com/home/forums/slidesapp/" class="publisher-nav-color" data-action="community-sidebar" data-forum="slidesapp" id="community-tab">
+<span class="community-name">
+<strong>Slides</strong>
+
+</span>
+
+<strong class="community-name-placeholder">Community</strong>
+</a>
+</li>
+<li class="nav-tab nav-tab--primary dropdown user-menu" data-role="logout"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<span class="dropdown-toggle-wrapper">
+
+<span>
+Login
+</span>
+
+</span> <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+
+
+<li>
+<a href="#" data-action="auth:disqus">Disqus</a>
+</li>
+<li>
+<a href="#" data-action="auth:facebook">Facebook</a>
+</li>
+<li>
+<a href="#" data-action="auth:twitter">Twitter</a>
+</li>
+<li>
+<a href="#" data-action="auth:google">Google</a>
+</li>
+
+
+
+</ul>
+</li>
+<li class="nav-tab nav-tab--primary notification-menu unread" data-role="notification-menu"><a href="https://disqus.com/home/inbox/" class="notification-container" data-action="home" data-home-path="home/inbox/">
+<span class="notification-icon icon-comment" aria-hidden=""></span>
+<span class="notification-count" data-role="notification-count">1</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<section id="conversation" data-role="main" data-tracking-area="main">
+<div class="nav nav-secondary" data-tracking-area="secondary-nav">
+<ul>
+<li id="recommend-button" class="nav-tab nav-tab--secondary recommend dropdown">
+<div class="thread-likes"><a href="#" data-action="recommend" title="Recommend this discussion" class="dropdown-toggle ">
+<span class="icon-heart"></span>
+<span class="label label-default">Recommend</span>
+<span class="label label-recommended">Recommended</span>
+<span class="label label-count">8</span>
+</a>
+<ul class="dropdown-menu dropdown-menu--coachmark">
+<li>
+<h2 class="coachmark__heading">Discussion Recommended!</h2>
+<p class="coachmark__description">Recommending means this is a 
+discussion worth sharing. It gets shared to your followers' Disqus 
+feeds, and gives the creator kudos!</p>
+<a href="https://disqus.com/home/?utm_source=disqus_embed&amp;utm_content=recommend_btn" class="btn btn-primary coachmark__button" target="_blank">
+ Find More Discussions 
+</a>
+</li>
+</ul>
+</div></li>
+<li id="thread-share-menu" class="nav-tab nav-tab--secondary dropdown share-menu hidden-sm"><a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
+<span class="icon-export"></span>
+<span class="label">Share</span>
+</a>
+<ul class="share-menu dropdown-menu">
+<li>
+<div class="share-menu__label">Share this discussion on</div>
+<ul>
+<li class="twitter">
+<a data-action="share:twitter" href="#">Twitter</a>
+</li>
+<li class="facebook">
+<a data-action="share:facebook" href="#">Facebook</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-role="post-sort" class="nav-tab nav-tab--secondary dropdown sorting pull-right">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Sort by Best
+
+
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu pull-right">
+<li class="selected">
+<a href="#" data-action="sort" data-sort="popular">Best<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="#" data-action="sort" data-sort="desc">Newest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="#" data-action="sort" data-sort="asc">Oldest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="posts">
+<div id="form" class="textarea-wrapper--top-level"><form class="reply">
+<div class="postbox">
+<div role="alert"></div>
+<div class="avatar">
+<span class="user">
+<img data-role="user-avatar" src="a_data/noavatar92_002.png" alt="Avatar">
+</span>
+</div>
+
+<div class="textarea-wrapper" data-role="textarea" dir="auto"><div><span class="placeholder">Join the discussion…</span><div class="textarea" tabindex="0" role="textbox" aria-multiline="true" data-role="editable" style="overflow: auto; overflow-wrap: break-word; max-height: 350px;" aria-label="Join the discussion…" contenteditable="true"><p><br></p></div><div style="display: none;"><ul class="user-mention__list">
+<li class="header user-mention__header">
+<h5>in this conversation</h5>
+</li>
+</ul>
+</div></div>
+<div data-role="drag-drop-placeholder" class="media-drag-hover" style="display: none">
+<div class="drag-text">
+⬇ Drag and drop your images here to upload them.
+</div>
+</div>
+<div class="media-preview empty" data-role="media-preview"><ul data-role="media-progress-list"></ul>
+<ul data-role="media-rich-list"></ul>
+<div class="media-expanded empty" data-role="media-preview-expanded">
+<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-role="media-preview-expanded-image" alt="Media preview placeholder">
+</div>
+</div>
+<div class="edit-alert" role="postbox-alert"></div>
+<div class="post-actions">
+<ul class="wysiwyg">
+<li class="wysiwyg__item" data-role="media-uploader"><a href="#" tabindex="-1" data-action="attach" class="attach" title="Upload Images"><span>Attach</span></a>
+<input data-role="media-upload" tabindex="-1" accept="image/*" type="file">
+</li>
+</ul>
+</div>
+</div>
+
+<div data-role="login-form"><div><section class="auth-section logged-out">
+<div class="connect">
+<h6>Log in with</h6>
+<ul data-role="login-menu" class="services login-buttons">
+
+<li class="auth-disqus">
+<button type="button" data-action="auth:disqus" title="Disqus" class="connect__button"><i class="icon-disqus"></i></button>
+</li>
+<li class="auth-facebook">
+<button type="button" data-action="auth:facebook" title="Facebook" class="connect__button"><i class="icon-facebook-circle"></i></button>
+</li>
+<li class="auth-twitter">
+<button type="button" data-action="auth:twitter" title="Twitter" class="connect__button"><i class="icon-twitter-circle"></i></button>
+</li>
+<li class="auth-google">
+<button type="button" data-action="auth:google" title="Google" class="connect__button"><i class="icon-google-plus-circle"></i></button>
+</li>
+</ul>
+</div>
+<div class="guest">
+<h6 class="guest-form-title">
+<span class="register-text"> or sign up with Disqus </span>
+<span class="guest-text"> or pick a name </span>
+</h6>
+
+<div class="help-tooltip__wrapper help-icon">
+<div id="rules" class="tooltip show help-tooltip">
+<h3 class="help-tooltip__heading">Disqus is a discussion network</h3>
+<ul class="help-tooltip__list">
+<li><span>Disqus never moderates or censors. The rules on this community are its own.</span></li>
+<li><span>Your email is safe with us. It's only used for moderation and optional notifications.</span></li>
+<li><span>Don't be a jerk or do anything illegal. Everything is easier that way.</span></li>
+</ul>
+<p class="clearfix"><a href="https://docs.disqus.com/kb/terms-and-policies/" class="btn btn-small help-tooltip__button" target="_blank">Read full terms and conditions</a></p>
+</div>
+</div>
+
+<p class="input-wrapper">
+<input dir="auto" placeholder="Name" name="display_name" id="view62_display_name" maxlength="30" class="input--text" type="text">
+</p>
+
+<div class="guest-details " data-role="guest-details">
+<p class="input-wrapper">
+<input dir="auto" placeholder="Email" name="email" id="view62_email" class="input--text" type="email">
+</p>
+
+<p class="input-wrapper">
+<input dir="auto" class="register-text input--text" placeholder="Password" name="password" id="view62_password" type="password">
+</p>
+
+<div class="acceptance-wrapper register-text">
+By signing up, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+<div class="acceptance-wrapper guest-text">
+By posting, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+
+<input name="author-guest" style="display:none" type="checkbox">
+
+<div class="proceed" data-role="submit-btn-container">
+<button type="submit" class="proceed__button btn submit" aria-label="Next"><span class="icon-proceed"></span><div class="spinner"></div></button>
+</div>
+</div>
+</div>
+</section>
+
+</div></div>
+</div>
+</form></div>
+
+<button class="alert alert--realtime" style="display: none" data-role="realtime-notification">
+</button>
+
+<div id="no-posts" style="display:none"></div>
+
+<ul id="post-list" class="post-list"><li class="post" id="post-902189442"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/google-fd2cb6191c7c34d2f5caa3c297e35e07/" class="user" data-action="profile" data-username="google-fd2cb6191c7c34d2f5caa3c297e35e07">
+<img data-role="user-avatar" data-user="51244999" src="a_data/avatar92_002.jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/google-fd2cb6191c7c34d2f5caa3c297e35e07/" data-action="profile" data-username="google-fd2cb6191c7c34d2f5caa3c297e35e07" data-role="username">Bartosz Zawada</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-902189442" data-role="relative-time" class="time-ago" title="Sunday, May 19, 2013 1:40 PM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Interesting.</p><p>My only question is: What benefits provide functional programming in JS?</p><p>I've programmed a little bit in Haskell, also like abusing map/reduce in Ruby, but I can't grasp the usefulness of FP in JS.<br>Care to explain?</p><p>Thanks!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-8" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">8</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ex51tu" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:902189442">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-902362464"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/pufuwozu/" class="user" data-action="profile" data-username="pufuwozu">
+<img data-role="user-avatar" data-user="2801547" src="a_data/avatar92.jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/pufuwozu/" data-action="profile" data-username="pufuwozu" data-role="username">Brian McKenna</a></span>
+
+<span><a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-902189442" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Bartosz Zawada</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-902362464" data-role="relative-time" class="time-ago" title="Sunday, May 19, 2013 5:23 PM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Referential transparency allows equational reasoning. In short, 
+whenever you see function application you can replace it with that 
+function's code but with arguments replaced with what you passed in 
+(look at beta reduction from lambda calculus for an example). You can 
+now reason about these programs as just function calls. That's all your 
+program becomes.</p><p>When you perform side-effects, you don't have 
+referential transparency. You can't reason about your program as just 
+function application, you have to think about it about state transitions
+ (e.g. o.x was 1 and calling function f makes o.x equal to 2). It's much
+ harder to prove that your code will do what you intended. You'll 
+certainly have more bugs.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-2" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">2</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ex8rc0" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:902362464">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-927183443"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/ezrakilty/" class="user" data-action="profile" data-username="ezrakilty">
+<img data-role="user-avatar" data-user="1540650" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/ezrakilty/" data-action="profile" data-username="ezrakilty" data-role="username">ezrakilty</a></span>
+
+<span><a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-902362464" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Brian McKenna</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-927183443" data-role="relative-time" class="time-ago" title="Tuesday, June 11, 2013 9:18 PM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>That explains the benefits of equational reasoning, but not of 
+functional programming in JavaScript. Equational reasoning doesn't apply
+ in JavaScript because it's not pure: it's hard to know whether a given 
+function has side effects or not.</p><p>A functional style of 
+programming within an imperative language is still valuable for several 
+reasons. For one, you can at least use equational "intuition" in some 
+places (although it's a dangerous way to reason). But more often, 
+functional techniques just give you flexibility to do things in new 
+ways, which might save you time, depending on what path you take in your
+ hacking process.</p><p>(I'd argue that the technique demonstrated in 
+this presentation is just a programming technique, which happens to come
+ from the community of functional programming. It is especially valuable
+ in concert with other functional-programming techniques, but it is a 
+useful tool even without those.)</p><p>Currying functions and otherwise 
+using function transformers may allow you to solve some programming 
+problem that would otherwise be more laborious to solve. For example, 
+you may find yourself wanting a whole family of callbacks that only 
+differ by some parameter (say an animation speed). Partial application 
+gives you an easy way to create those.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/fc0rbn" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:927183443">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-927185410"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/pufuwozu/" class="user" data-action="profile" data-username="pufuwozu">
+<img data-role="user-avatar" data-user="2801547" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/pufuwozu/" data-action="profile" data-username="pufuwozu" data-role="username">Brian McKenna</a></span>
+
+<span><a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-927183443" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> ezrakilty</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-927185410" data-role="relative-time" class="time-ago" title="Tuesday, June 11, 2013 9:21 PM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>JavaScript doesn't enforce purity but you can write pure functions in JavaScript. Functional programming.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/fc0sua" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:927185410">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-927216807"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/ezrakilty/" class="user" data-action="profile" data-username="ezrakilty">
+<img data-role="user-avatar" data-user="1540650" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/ezrakilty/" data-action="profile" data-username="ezrakilty" data-role="username">ezrakilty</a></span>
+
+<span><a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-927185410" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Brian McKenna</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-927216807" data-role="relative-time" class="time-ago" title="Tuesday, June 11, 2013 10:10 PM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>And then you can't use equational reasoning because somebody else wrote an impure function. Or perhaps you want to use the DOM.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/fc1h2f" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:927216807">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-927270304"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/pufuwozu/" class="user" data-action="profile" data-username="pufuwozu">
+<img data-role="user-avatar" data-user="2801547" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/pufuwozu/" data-action="profile" data-username="pufuwozu" data-role="username">Brian McKenna</a></span>
+
+<span><a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-927216807" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> ezrakilty</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-927270304" data-role="relative-time" class="time-ago" title="Tuesday, June 11, 2013 11:26 PM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Both can be trivially wrapped to become referentially transparent. IO
+ monad. Instantly gain referential transparency. Done in impure 
+languages all the time.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/fc2mcg" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:927270304">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-902154089"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/ooooak/" class="user" data-action="profile" data-username="ooooak">
+<img data-role="user-avatar" data-user="27529998" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/ooooak/" data-action="profile" data-username="ooooak" data-role="username">ooooak</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-902154089" data-role="relative-time" class="time-ago" title="Sunday, May 19, 2013 12:45 PM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>i think right way is to learn functional programming is by solving 
+problems in a pure functional language. that way you can apply those 
+skills and mind set to imperative programming. i don't see any other way
+ to learn fp.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-5" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">5</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ex4ajt" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:902154089">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-902202096"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/abhishek_hingnikar/" class="user" data-action="profile" data-username="abhishek_hingnikar">
+<img data-role="user-avatar" data-user="72586797" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/abhishek_hingnikar/" data-action="profile" data-username="abhishek_hingnikar" data-role="username">Abhishek Hingnikar</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-902202096" data-role="relative-time" class="time-ago" title="Sunday, May 19, 2013 2:00 PM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Brilliant!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-4" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">4</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-1" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ex5blc" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:902202096">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-901864831"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/juanfatas/" class="user" data-action="profile" data-username="juanfatas">
+<img data-role="user-avatar" data-user="18566384" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/juanfatas/" data-action="profile" data-username="juanfatas" data-role="username">juanfatas</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-901864831" data-role="relative-time" class="time-ago" title="Sunday, May 19, 2013 5:18 AM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>amazing presentation!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-2" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">2</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-1" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ewy3cv" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:901864831">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-902303830"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/twitter-107009445/" class="user" data-action="profile" data-username="twitter-107009445">
+<img data-role="user-avatar" data-user="22830822" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/twitter-107009445/" data-action="profile" data-username="twitter-107009445" data-role="username">Mohammed Habib</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-902303830" data-role="relative-time" class="time-ago" title="Sunday, May 19, 2013 4:30 PM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Awesome!!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-1" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-1" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ex7i3a" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:902303830">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-901948243"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/zx1986/" class="user" data-action="profile" data-username="zx1986">
+<img data-role="user-avatar" data-user="25054593" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/zx1986/" data-action="profile" data-username="zx1986" data-role="username">zx1986</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-901948243" data-role="relative-time" class="time-ago" title="Sunday, May 19, 2013 7:55 AM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>thank you!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-1" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-1" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/ewzvpv" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:901948243">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-902728953"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/steveridaker/" class="user" data-action="profile" data-username="steveridaker">
+<img data-role="user-avatar" data-user="51294670" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/steveridaker/" data-action="profile" data-username="steveridaker" data-role="username">steve ridaker</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-902728953" data-role="relative-time" class="time-ago" title="Monday, May 20, 2013 4:36 AM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>hate animated powerpoint replacements that dont even let you click through at your own pace.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-1" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/exgm49" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:902728953">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-955582486"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/leonardpauli/" class="user" data-action="profile" data-username="leonardpauli">
+<img data-role="user-avatar" data-user="61322975" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/leonardpauli/" data-action="profile" data-username="leonardpauli" data-role="username">Leonard Pauli</a></span>
+
+<span><a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-902728953" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> steve ridaker</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-955582486" data-role="relative-time" class="time-ago" title="Monday, July 8, 2013 3:49 PM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>No? Have you tried the arrow keys? Ah.. you meant the animation speed
+ limitation... Click somewhere on the progress bar at the bottom of the 
+presentation to jump directly to that slide (and if it's more than one 
+slide away, the animation will be skipped). This is soo much cleaner and
+ (I think) better than PowerPoint. Also, if you hold (or press quickly) 
+the arrow key, it will fast-scroll through the slides. Brilliant.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/fsxg5y" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:955582486">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-902624258"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_Qjv8Ueug8e/" class="user" data-action="profile" data-username="disqus_Qjv8Ueug8e">
+<img data-role="user-avatar" data-user="51281138" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_Qjv8Ueug8e/" data-action="profile" data-username="disqus_Qjv8Ueug8e" data-role="username">meme</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-902624258" data-role="relative-time" class="time-ago" title="Sunday, May 19, 2013 11:42 PM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Fantistic!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-1" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/exedc2" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:902624258">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-938910944"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/gmilby/" class="user" data-action="profile" data-username="gmilby">
+<img data-role="user-avatar" data-user="1810295" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/gmilby/" data-action="profile" data-username="gmilby" data-role="username">gmilby</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-938910944" data-role="relative-time" class="time-ago" title="Saturday, June 22, 2013 7:58 PM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>thanks - that was useful.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/fj04bk" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:938910944">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-927669672"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/ensartopba/" class="user" data-action="profile" data-username="ensartopba">
+<img data-role="user-avatar" data-user="56279148" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/ensartopba/" data-action="profile" data-username="ensartopba" data-role="username">Ensar Topbaş</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-927669672" data-role="relative-time" class="time-ago" title="Wednesday, June 12, 2013 9:56 AM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Prepared cleverly. Keep up the good work !</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/fcb6i0" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:927669672">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-928633836"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/giaskaylee/" class="user" data-action="profile" data-username="giaskaylee">
+<img data-role="user-avatar" data-user="47380908" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/giaskaylee/" data-action="profile" data-username="giaskaylee" data-role="username">Gias Kay Lee</a></span>
+
+<span><a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-927669672" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Ensar Topbaş</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-928633836" data-role="relative-time" class="time-ago" title="Thursday, June 13, 2013 1:45 AM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Thanks!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/fcvugc" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:928633836">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-922013310"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/shaan360/" class="user" data-action="profile" data-username="shaan360">
+<img data-role="user-avatar" data-user="1421842" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/shaan360/" data-action="profile" data-username="shaan360" data-role="username">Guest</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-922013310" data-role="relative-time" class="time-ago" title="Friday, June 7, 2013 4:08 AM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>cool and interesting</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/f8xy0u" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:922013310">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li class="post" id="post-920941540"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/miezanechimane/" class="user" data-action="profile" data-username="miezanechimane">
+<img data-role="user-avatar" data-user="55035111" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/miezanechimane/" data-action="profile" data-username="miezanechimane" data-role="username">Miezan Echimane</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://slides.com/gsklee/functional-programming-in-5-minutes#comment-920941540" data-role="relative-time" class="time-ago" title="Thursday, June 6, 2013 8:46 AM">
+4 years ago
+</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Cool, very refreshing approach on lambda calculus :) thanks</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/f8az1g" name="Link" title="Click to copy post link" data-action="copy-link" readonly="readonly">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:920941540">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+<div class="load-more" data-role="more" style="display:none">
+<a href="#" data-action="more-posts" class="btn load-more__button">Load more comments</a>
+</div>
+</div>
+
+</section>
+
+<div id="placement-bottom" data-tracking-area="discovery-south"></div>
+
+<div id="footer" data-tracking-area="footer" class="disqus-footer__wrapper">
+<ul class="disqus-footer">
+<li class="disqus-footer__logo"><a href="https://disqus.com/" rel="nofollow" title="Powered by Disqus" class="disqus-footer__link">Powered by Disqus</a></li>
+<li id="thread-subscribe-button" class="email disqus-footer__item"> 
+<div class="default">
+<a href="#" rel="nofollow" data-action="subscribe" title="Subscribe and get email updates from this discussion" class="disqus-footer__link"><i aria-hidden="true" class="icon icon-mail"></i><span class="clip">Subscribe</span> <i aria-hidden="true" class="icon icon-checkmark"></i></a>
+</div>
+<div class="form">
+<div class="input-wrapper"><input id="thread-subscribe-email" placeholder="yourname@email.com" class="disqus-footer__input input--text" type="email"></div>
+</div>
+</li>
+<li class="install disqus-footer__item">
+<a href="https://publishers.disqus.com/engage?utm_source=slidesapp&amp;utm_medium=Disqus-Footer" rel="nofollow" target="_blank" class="disqus-footer__link">
+<i aria-hidden="true" class="icon icon-disqus"></i>
+<span class="clip hidden-sm">Add Disqus to your site</span>
+<span class="clip visible-sm hidden-xs">Add Disqus</span>
+<span class="clip visible-xs">Add</span>
+</a>
+</li>
+<li class="privacy disqus-footer__item">
+<a href="https://help.disqus.com/customer/portal/articles/1657951?utm_source=disqus&amp;utm_medium=embed-footer&amp;utm_content=privacy-btn" rel="nofollow" target="_blank" class="disqus-footer__link">
+<i aria-hidden="true" class="icon icon-lock"></i>
+<span class="clip">Privacy</span>
+</a>
+</li>
+</ul>
+</div>
+</div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="a_data/ao6eUeuGXQq.html" frameborder="0"></iframe></div></div></div><iframe style="position: absolute; width: 1px; height: 1px; left: -9999px;" id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" src="a_data/iframe.html"></iframe><img style="display: none;" src="a_data/23096.gif"><img style="display: none;" src="a_data/a_002.html"><img style="display: none;" src="a_data/tpidc1h52jv32op665a.gif"><iframe style="display: none;" src="a_data/sync.html"></iframe></body></html>

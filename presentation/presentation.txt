@@ -1,0 +1,64 @@
+Étude comparative d'une application mobile entre Android et iOS.
+
+Les téléphones intelligents occupent une place importante aujourd'hui. Les appareils mobiles se diffèrent des ordinateurs de bureau.
+
+Comment guider un développeur novice dans le choix de l’environnement de développement mobile ?
+
+Les caractéristiques potentielles à comparer : 
+* Les configurations
+* Le multilingue
+* Les menus
+* Le support de multiples dimensions d’écrans
+* Les glissements
+* Les alarmes
+* Les notifications
+* L'exécution des tâches en arrière-plan
+
+L'étude s'est concentrée sur 3 caractéristiques :
+* La géolocalisation
+* Les bases de données mobiles
+* Les capteurs
+
+Questionnaire + 10 participants + prototype iOS et Android = l'analyse des résultats
+
+Premier téléphone cellulaire
+Les premières applications mobiles
+Premier PDA Psion EPOC
+
+Android
+
+* En juillet 2005, Google a acheté Android
+* En 2007 un consortium de 84 entreprises
+* Version modifiée du noyau Linux
+* Machine virtuelle (VM) Dalvik
+* APK
+
+iOS
+
+* Commercialisé par Apple inc
+* OS par défaut des appareils iphone, iPad, etc ...
+* Dérivé de Mac OS X
+* Partage la fondation Darwin (UNIX)
+* IPA
+
+Les outils de développement
+
+Le sondage
+
+Diffcultés escomptées pour Android : Ressource efficaces et La diversité des appareils
+
+Diffcultés escomptées pour iOS : Posséder un ordinateur Apple, Trouver des ressources et Apprendre Objective-C
+
+Le prototype
+
+OS :
+* Xcode facilite la programmation pour iOS
+* Les ressources ne sont pas nombreuses
+* Elles sont de bonne qualité
+
+Android :
+* Android Studio rattrappe Xcode
+* Les ressources sont disponibles
+* La qualité n'est pas toujours au rendez-vous
+
+Google et Apple ont fait un travail énorme pour rendre la programmation des applications mobiles facile
